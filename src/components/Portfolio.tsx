@@ -1,11 +1,10 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ExternalLink, GitHub } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 
 // Project data
 const projects = [
@@ -228,7 +227,7 @@ const Portfolio = () => {
                       rel="noopener noreferrer"
                       className="text-white hover:text-gold flex items-center gap-1 transition-colors"
                     >
-                      <GitHub size={16} />
+                      <Github size={16} />
                       <span>Código</span>
                     </a>
                   </div>

@@ -1,5 +1,5 @@
 
-import { Instagram, GitHub, Linkedin, Youtube, MessageCircle } from 'lucide-react';
+import { Instagram, Github, Linkedin, Youtube, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -33,7 +33,7 @@ const Footer = () => {
                 className="text-white hover:text-gold transition-colors"
                 aria-label="GitHub"
               >
-                <GitHub size={24} />
+                <Github size={24} />
               </a>
               <a
                 href="https://linkedin.com/in/"
