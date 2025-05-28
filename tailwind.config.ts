@@ -23,6 +23,18 @@ export default {
 				ubuntu: ["Ubuntu", "sans-serif"],
 			},
 			colors: {
+				// Cores do WALLARCANJO baseadas na imagem 1
+				primary: {
+					DEFAULT: '#6D0341', // Roxo principal
+					dark: '#A1196D',     // Roxo médio  
+				},
+				secondary: {
+					DEFAULT: '#6DB9B9',  // Turquesa principal
+					light: '#4898A1',    // Turquesa claro
+					dark: '#027D8F',     // Turquesa escuro
+					darker: '#09626A',   // Turquesa mais escuro
+				},
+				accent: '#EFEEEE',       // Cinza claro de destaque
 				cherry: "#d2042d",
 				gold: "#FFD700",
 				border: 'hsl(var(--border))',
@@ -30,14 +42,6 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
-				},
-				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
-				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
@@ -45,10 +49,6 @@ export default {
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))'
-				},
-				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',

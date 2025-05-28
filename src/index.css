@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 60 100% 50%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
 
-    --card: 0 0% 5%;
-    --card-foreground: 60 100% 50%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 60 100% 50%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 350 85% 41%;
+    --primary: 288 89% 20%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 60 100% 50%;
+    --secondary: 180 35% 57%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 60 100% 50%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 0 0% 94%;
+    --accent-foreground: 0 0% 9%;
 
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 60 100% 50%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 288 89% 20%;
 
     --radius: 0.5rem;
   }
@@ -45,7 +45,7 @@
   body {
     @apply bg-background text-foreground font-ubuntu;
     scrollbar-width: thin;
-    scrollbar-color: #d2042d #000000;
+    scrollbar-color: #6D0341 #f1f1f1;
   }
 
   html {
@@ -58,36 +58,36 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #000000;
+    background: #f1f1f1;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #d2042d;
+    background: #6D0341;
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #b50023;
+    background: #A1196D;
   }
 }
 
 @layer components {
   .section-heading {
-    @apply text-gold text-3xl md:text-4xl font-bold mb-8 relative inline-block;
+    @apply text-primary text-3xl md:text-4xl font-bold mb-8 relative inline-block;
   }
 
   .section-heading::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-cherry mt-1;
+    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-secondary mt-1;
   }
   
   .nav-link {
-    @apply text-white hover:text-gold transition-colors relative;
+    @apply text-gray-700 hover:text-primary transition-colors relative;
   }
 
   .nav-link::after {
     content: '';
-    @apply absolute left-0 bottom-[-5px] w-0 h-[2px] bg-cherry transition-all duration-300;
+    @apply absolute left-0 bottom-[-5px] w-0 h-[2px] bg-primary transition-all duration-300;
   }
   
   .nav-link:hover::after {
