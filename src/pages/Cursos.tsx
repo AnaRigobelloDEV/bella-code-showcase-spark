@@ -1,11 +1,11 @@
-
 import { useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Clock, Users, Star } from 'lucide-react';
+import { Clock, Users, Star, Award } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Footer from '@/components/tattoo/Footer';
 
 const Cursos = () => {
   const courses = [
@@ -110,7 +110,7 @@ const Cursos = () => {
   };
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-20 bg-[#E9E8D4] min-h-screen">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -127,6 +127,10 @@ const Cursos = () => {
             <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
               <Users className="text-primary" size={20} />
               <span className="text-primary font-medium">Turmas Reduzidas</span>
+            </div>
+            <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
+              <Award className="text-primary" size={20} />
+              <span className="text-primary font-medium">Certificado de Conclusão</span>
             </div>
           </div>
         </div>
@@ -200,6 +204,7 @@ const Cursos = () => {
           </Button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

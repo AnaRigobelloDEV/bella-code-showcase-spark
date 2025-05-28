@@ -1,10 +1,14 @@
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { MapPin, Phone, Clock, Instagram } from 'lucide-react';
+import { MapPin, Phone, Clock, Mail, Instagram } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Footer from '@/components/tattoo/Footer';
 
 const Contato = () => {
   const [formData, setFormData] = useState({
@@ -35,7 +39,7 @@ const Contato = () => {
   };
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-20 bg-[#E9E8D4] min-h-screen">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -82,7 +86,7 @@ const Contato = () => {
               
               <div>
                 <Label htmlFor="message" className="text-gray-700 mb-2 block">Mensagem</Label>
-                <textarea
+                <Textarea
                   id="message"
                   name="message"
                   value={formData.message}
@@ -91,7 +95,7 @@ const Contato = () => {
                   rows={5}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
                   placeholder="Conte-nos sobre sua ideia de tatuagem, interesse em cursos ou qualquer dúvida..."
-                ></textarea>
+                ></Textarea>
               </div>
               
               <Button type="submit" className="w-full bg-primary hover:bg-primary-dark text-white py-3 text-lg">
@@ -156,54 +160,7 @@ const Contato = () => {
       </div>
 
       {/* Footer with Instagram Links */}
-      <footer className="mt-20 bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <img 
-                src="/lovable-uploads/6c90fed9-fe15-42f4-bdb2-32d5a7f26e8d.png"
-                alt="WALLARCANJO Logo"
-                className="h-16 w-auto mb-4 brightness-0 invert"
-              />
-              <p className="text-gray-300">
-                Transformando ideias em arte desde 2010. 
-                O estúdio que une tradição e inovação na arte da tatuagem.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-bold mb-4">Contato</h3>
-              <div className="space-y-2 text-gray-300">
-                <p>Rua das Artes, 123 - Centro</p>
-                <p>São Paulo, SP - CEP 01234-567</p>
-                <p>(11) 9999-9999</p>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-bold mb-4">Siga Nossos Artistas</h3>
-              <div className="grid grid-cols-3 gap-2">
-                {artists.map((artist, index) => (
-                  <a
-                    key={index}
-                    href={`https://instagram.com/${artist.replace('@', '')}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-sm text-gray-300 hover:text-secondary transition-colors"
-                  >
-                    <Instagram size={14} />
-                    <span className="truncate">{artist}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 WALLARCANJO Tattoo & Academy. Todos os direitos reservados.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

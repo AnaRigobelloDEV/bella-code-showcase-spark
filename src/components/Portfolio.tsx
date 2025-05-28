@@ -6,71 +6,67 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ExternalLink, Github } from 'lucide-react';
 
-// Project data
-const projects = [
+type Category = 'all' | 'web' | 'mobile' | 'backend';
+
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  category: Category;
+  technologies: string[];
+};
+
+const projects: Project[] = [
   {
     id: 1,
-    title: "E-commerce Dashboard",
-    description: "Dashboard administrativo para plataforma de e-commerce com análise de dados em tempo real.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    category: "web",
-    technologies: ["React", "TypeScript", "Node.js", "MongoDB"],
-    liveLink: "#",
-    githubLink: "#"
+    title: 'BellaCode Website',
+    description: 'Website institucional da BellaCode, apresentando serviços e portfólio.',
+    image: 'https://images.unsplash.com/photo-1661956602153-2338e54194ca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA==',
+    category: 'web',
+    technologies: ['React', 'Tailwind CSS', 'Vite']
   },
   {
     id: 2,
-    title: "Aplicativo de Fitness",
-    description: "Aplicativo mobile para acompanhamento de treinos e planos nutricionais personalizados.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-    category: "mobile",
-    technologies: ["React Native", "Firebase", "Redux"],
-    liveLink: "#",
-    githubLink: "#"
+    title: 'Mobile App Dashboard',
+    description: 'Dashboard para gerenciamento de dados de um aplicativo mobile.',
+    image: 'https://images.unsplash.com/photo-1555059700-28d8c4aa3183?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1vYmlsZSUyMGFwcHxlbnwwfHwwfHx8MA==',
+    category: 'mobile',
+    technologies: ['React Native', 'Firebase']
   },
   {
     id: 3,
-    title: "API de Pagamentos",
-    description: "Sistema de processamento de pagamentos com integração a múltiplas plataformas.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    category: "backend",
-    technologies: ["Node.js", "Express", "MongoDB", "Docker"],
-    liveLink: "#",
-    githubLink: "#"
+    title: 'E-commerce Backend API',
+    description: 'API para um e-commerce, com autenticação, gerenciamento de produtos e pagamentos.',
+    image: 'https://images.unsplash.com/photo-1518770660439-464ef50ce906?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFja2VuZHxlbnwwfHwwfHx8MA==',
+    category: 'backend',
+    technologies: ['Node.js', 'Express', 'MongoDB']
   },
   {
     id: 4,
-    title: "Site Institucional",
-    description: "Website responsivo para empresa de arquitetura com galeria de projetos e blog integrado.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    category: "web",
-    technologies: ["Next.js", "Tailwind CSS", "Sanity CMS"],
-    liveLink: "#",
-    githubLink: "#"
+    title: 'Landing Page de Evento',
+    description: 'Landing page para um evento, com informações, formulário de inscrição e mapa.',
+    image: 'https://images.unsplash.com/photo-1486312339633-3241e19c9024?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2ViJTIwZGVzaWduc3xlbnwwfHwwfHx8MA==',
+    category: 'web',
+    technologies: ['HTML', 'CSS', 'JavaScript']
   },
   {
     id: 5,
-    title: "Sistema de Gestão",
-    description: "Plataforma para gestão de equipes e projetos com ferramentas de colaboração.",
-    image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
-    category: "backend",
-    technologies: ["Django", "PostgreSQL", "Redis", "AWS"],
-    liveLink: "#",
-    githubLink: "#"
+    title: 'App de Lista de Tarefas',
+    description: 'Aplicativo mobile para gerenciamento de tarefas, com notificações e sincronização na nuvem.',
+    image: 'https://images.unsplash.com/photo-1542903660-7d611b5804de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vYmlsZSUyMGFwcHxlbnwwfHwwfHx8MA==',
+    category: 'mobile',
+    technologies: ['Flutter', 'Dart']
   },
   {
     id: 6,
-    title: "Aplicativo de Delivery",
-    description: "App de entrega de comida com rastreamento em tempo real e sistema de avaliação.",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    category: "mobile",
-    technologies: ["Flutter", "Firebase", "Google Maps API"],
-    liveLink: "#",
-    githubLink: "#"
+    title: 'API de Gerenciamento de Usuários',
+    description: 'API para gerenciamento de usuários, com autenticação, autorização e roles.',
+    image: 'https://images.unsplash.com/photo-1542831323-539828069470?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGdhcmFnZW18ZW58MHx8MHx8fDA=',
+    category: 'backend',
+    technologies: ['Python', 'Django', 'PostgreSQL']
   }
 ];
-
-type Category = 'all' | 'web' | 'mobile' | 'backend';
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
@@ -89,7 +85,6 @@ const Portfolio = () => {
     gsap.registerPlugin(ScrollTrigger);
     
     if (portfolioRef.current) {
-      // Animate heading
       gsap.from(".portfolio-heading", {
         scrollTrigger: {
           trigger: portfolioRef.current,
@@ -100,140 +95,101 @@ const Portfolio = () => {
         duration: 0.8
       });
       
-      // Animate filter buttons
       gsap.from(".filter-button", {
         scrollTrigger: {
           trigger: portfolioRef.current,
-          start: "top 75%",
+          start: "top 70%",
         },
         opacity: 0,
         y: 20,
         stagger: 0.1,
-        duration: 0.5
+        duration: 0.6
       });
       
-      // Create a new animation for project cards whenever they change
-      const animateProjects = () => {
-        gsap.fromTo(".project-card", 
-          { opacity: 0, y: 30 }, 
-          { 
-            opacity: 1, 
-            y: 0, 
-            stagger: 0.1, 
-            duration: 0.6,
-            ease: "power3.out"
-          }
-        );
-      };
-      
-      // Run once on initial render
-      animateProjects();
-      
-      // Setup an animation for when the filtered projects change
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.type === 'childList' && mutation.target.classList.contains('projects-grid')) {
-            animateProjects();
-          }
-        });
+      gsap.from(".project-card", {
+        scrollTrigger: {
+          trigger: ".projects-grid",
+          start: "top 80%",
+        },
+        opacity: 0,
+        y: 30,
+        stagger: 0.15,
+        duration: 0.6
       });
-      
-      // Start observing
-      const projectsGrid = portfolioRef.current.querySelector('.projects-grid');
-      if (projectsGrid) {
-        observer.observe(projectsGrid, { childList: true });
-      }
-      
-      return () => {
-        ScrollTrigger.getAll().forEach(t => t.kill());
-        observer.disconnect();
-      };
     }
+    
+    return () => {
+      ScrollTrigger.getAll().forEach(t => t.kill());
+    };
   }, []);
   
-  // Re-trigger animation when filtered projects change
-  useEffect(() => {
-    gsap.fromTo(".project-card", 
-      { opacity: 0, y: 20 }, 
-      { 
-        opacity: 1, 
-        y: 0, 
-        stagger: 0.1, 
-        duration: 0.5,
-        ease: "power2.out"
-      }
-    );
-  }, [filteredProjects]);
-  
-  const handleCategoryChange = (category: Category) => {
-    setActiveCategory(category);
-  };
-  
   return (
-    <section id="portfolio" ref={portfolioRef} className="py-20 px-4">
+    <section id="portfolio" ref={portfolioRef} className="py-20 px-4 bg-black">
       <div className="container mx-auto">
-        <h2 className="portfolio-heading section-heading">Meu Portfólio</h2>
+        <h2 className="portfolio-heading section-heading">Portfólio</h2>
         
-        <div className="flex flex-wrap justify-center gap-4 mt-8 mb-12">
-          {['all', 'web', 'mobile', 'backend'].map((category) => (
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {[
+            { key: 'all', label: 'Todos' },
+            { key: 'web', label: 'Web' },
+            { key: 'mobile', label: 'Mobile' },
+            { key: 'backend', label: 'Backend' }
+          ].map((category) => (
             <Button
-              key={category}
-              onClick={() => handleCategoryChange(category as Category)}
-              className={`filter-button px-6 py-2 rounded-full transition-all ${
-                activeCategory === category 
-                  ? 'bg-cherry text-white' 
-                  : 'bg-transparent text-white border border-gray-700 hover:border-cherry'
+              key={category.key}
+              onClick={() => setActiveCategory(category.key as Category)}
+              className={`filter-button ${
+                activeCategory === category.key
+                  ? 'bg-cherry text-white'
+                  : 'bg-transparent border border-gray-600 text-white hover:bg-cherry hover:text-white'
               }`}
             >
-              {category === 'all' ? 'Todos' : category === 'web' ? 'Web' : category === 'mobile' ? 'Mobile' : 'Backend'}
+              {category.label}
             </Button>
           ))}
         </div>
         
         <div className="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
-            <div key={project.id} className="project-card">
-              <Card className="bg-black/50 border border-gray-800 overflow-hidden h-full transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
-                <div 
-                  className="h-48 bg-cover bg-center" 
-                  style={{ backgroundImage: `url(${project.image})` }}
-                >
+            <Card key={project.id} className="project-card bg-black/50 border border-gray-800 overflow-hidden group hover:border-cherry transition-colors">
+              <div className="relative overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                  <Button size="sm" className="bg-cherry hover:bg-cherry/80 text-white">
+                    <ExternalLink size={16} />
+                  </Button>
+                  <Button size="sm" className="bg-gold hover:bg-gold/80 text-black">
+                    <Github size={16} />
+                  </Button>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-gold text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-white/70 mb-4">{project.description}</p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, index) => (
-                      <Badge key={index} className="bg-cherry/30 text-white border-none">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                  
-                  <div className="flex justify-between mt-4">
-                    <a 
-                      href={project.liveLink} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-white hover:text-gold flex items-center gap-1 transition-colors"
-                    >
-                      <ExternalLink size={16} />
-                      <span>Demo</span>
-                    </a>
-                    <a 
-                      href={project.githubLink} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-white hover:text-gold flex items-center gap-1 transition-colors"
-                    >
-                      <Github size={16} />
-                      <span>Código</span>
-                    </a>
-                  </div>
+              </div>
+              
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                <p className="text-gray-300 mb-4 text-sm">{project.description}</p>
+                
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech) => (
+                    <Badge key={tech} variant="secondary" className="bg-gray-800 text-gray-300 text-xs">
+                      {tech}
+                    </Badge>
+                  ))}
                 </div>
-              </Card>
-            </div>
+                
+                <div className="flex gap-2">
+                  <Button size="sm" className="bg-cherry hover:bg-cherry/80 text-white flex-1">
+                    Ver Projeto
+                  </Button>
+                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-gray-800">
+                    <Github size={16} />
+                  </Button>
+                </div>
+              </div>
+            </Card>
           ))}
         </div>
       </div>

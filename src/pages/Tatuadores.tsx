@@ -1,9 +1,9 @@
-
 import { useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Instagram } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Footer from '@/components/tattoo/Footer';
 
 const Tatuadores = () => {
   const artists = [
@@ -146,7 +146,7 @@ const Tatuadores = () => {
   }, []);
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-20 bg-[#E9E8D4] min-h-screen">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Nossos Tatuadores</h1>
@@ -202,6 +202,7 @@ const Tatuadores = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

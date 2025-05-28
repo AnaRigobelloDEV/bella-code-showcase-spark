@@ -30,7 +30,7 @@ const Header = () => {
           <img 
             src="/lovable-uploads/445f1868-0e1a-4a22-a981-836878130ab5.png" 
             alt="WALLARCANJO Logo"
-            className="h-12 w-auto"
+            className="h-16 w-auto"
           />
         </Link>
 
