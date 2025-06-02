@@ -76,11 +76,7 @@ const Home = () => {
         ></div>
         
         <div className="hero-content container mx-auto px-4 text-center relative z-10">
-          <img 
-            src="/lovable-uploads/6c90fed9-fe15-42f4-bdb2-32d5a7f26e8d.png"
-            alt="WALLARCANJO Logo"
-            className="h-32 w-auto mx-auto mb-8"
-          />
+          
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Arte que Marca Sua História
           </h1>
@@ -90,12 +86,12 @@ const Home = () => {
             inovação para criar tatuagens que contam sua história.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild className="bg-secondary hover:bg-secondary-dark text-white px-8 py-3 text-lg">
-              <Link to="/tatuadores">Conheça Nossos Artistas</Link>
+            <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 text-lg">
+              <Link to="/tatuadores">Conheça nossos artistas</Link>
             </Button>
-            <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-primary px-8 py-3 text-lg">
-              <Link to="/contato">Agende uma Consulta</Link>
-            </Button>
+            <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 text-lg">
+              <Link to="/contato">Agende uma tattoo</Link>
+              </Button>
           </div>
         </div>
       </section>

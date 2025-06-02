@@ -53,7 +53,7 @@ const Header = () => {
     )}>
       <div className="container mx-auto flex justify-between items-center px-4">
         <div className="flex items-center">
-          <h1 className="text-gold text-2xl font-bold">
+          <h1 className="text-gold text-8xl font-bold">
             BELLA<span className="text-cherry">CODE</span>
           </h1>
         </div>

@@ -28,9 +28,9 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center px-4">
         <Link to="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/445f1868-0e1a-4a22-a981-836878130ab5.png" 
+            src="/lovable-uploads/logo1.png" 
             alt="WALLARCANJO Logo"
-            className="h-16 w-auto"
+            className="h-32 w-52 object-contain"
           />
         </Link>
 
