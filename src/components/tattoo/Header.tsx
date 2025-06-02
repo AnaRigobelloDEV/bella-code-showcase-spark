@@ -25,12 +25,12 @@ const Header = () => {
       "fixed top-0 left-0 w-full z-50 transition-all duration-300",
       isScrolled ? "bg-white/95 backdrop-blur-sm shadow-lg py-2" : "bg-white py-4"
     )}>
-      <div className="container mx-auto flex justify-between items-center px-4">
-        <Link to="/" className="flex items-center">
+      <div className="container mx-auto flex justify-between items-center px-4 py-[-20rem]">
+        <Link to="/" className="flex items-center ">
           <img 
             src="/lovable-uploads/logo1.png" 
             alt="WALLARCANJO Logo"
-            className="h-32 w-52 object-contain"
+            className="h-38 w-36 object-cover "
           />
         </Link>
 

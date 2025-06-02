@@ -66,7 +66,7 @@ const Home = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary to-primary-dark text-white relative overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-secondary to-secondary-dark text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-30"
