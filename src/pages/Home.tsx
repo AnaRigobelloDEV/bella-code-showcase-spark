@@ -15,7 +15,7 @@ const Home = () => {
       title: "Fundadora & Tatuadora",
       specialty: "Realismo e Fine Line",
       instagram: "@wall_tattoo",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b332c634?w=400"
+      image: "https://i.pinimg.com/236x/2e/48/9b/2e489bf8ea547b58f98851b6b49e434c.jpg"
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ const Home = () => {
       title: "Tatuador Principal",
       specialty: "Black Work e Ornamental",
       instagram: "@sergio_lima_tattoo",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+      image: "https://i.pinimg.com/236x/34/05/5b/34055b587c5830da3ee49c85fa3de482.jpg"
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ const Home = () => {
       title: "Especialista em Cores",
       specialty: "Aquarela e New School",
       instagram: "@paty_color_tattoo",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400"
+      image: "https://i.pinimg.com/236x/a8/1c/8f/a81c8f3f415ce0c58ebc24aaccc5321d.jpg"
     }
   ];
 
@@ -104,7 +104,7 @@ const Home = () => {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-white">🎨</span>
+                  <img src="./lovable-uploads/ink.png" alt="Arte" className="h-12 w-auto object-cover"/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Arte Personalizada</h3>
                 <p className="text-gray-600">
@@ -113,7 +113,7 @@ const Home = () => {
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-white">🛡️</span>
+                  <img src="./lovable-uploads/protect.png" alt="Arte" className="h-10 w-auto object-cover"/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Segurança Total</h3>
                 <p className="text-gray-600">
@@ -122,7 +122,7 @@ const Home = () => {
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-white">🎓</span>
+                  <img src="./lovable-uploads/diploma.png" alt="Arte" className="h-10 w-auto object-cover"/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Formação Profissional</h3>
                 <p className="text-gray-600">

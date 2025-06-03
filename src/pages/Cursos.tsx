@@ -17,7 +17,7 @@ const Cursos = () => {
       students: "12 alunos",
       level: "Iniciante",
       price: "R$ 1.200",
-      image: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
+      image: "https://i.pinimg.com/236x/70/d0/7a/70d07aeb497442d3c88bb95d941aeedb.jpg",
       topics: ["Higienização e segurança", "Equipamentos básicos", "Técnicas de traço", "Sombreamento inicial"]
     },
     {
@@ -28,7 +28,7 @@ const Cursos = () => {
       students: "8 alunos",
       level: "Avançado",
       price: "R$ 2.500",
-      image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400",
+      image: "https://i.pinimg.com/236x/32/fc/32/32fc32a3c4730884c586c81153bb359d.jpg",
       topics: ["Estudo de luz e sombra", "Técnicas de realismo", "Retratos em pele", "Texturas avançadas"]
     },
     {
@@ -39,7 +39,7 @@ const Cursos = () => {
       students: "10 alunos",
       level: "Intermediário",
       price: "R$ 1.800",
-      image: "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400",
+      image: "https://i.pinimg.com/236x/c3/d3/73/c3d3738cf866eff1a582d92438670bec.jpg",
       topics: ["Teoria das cores", "Técnicas de aquarela", "New school", "Degradês e transições"]
     },
     {
@@ -50,7 +50,7 @@ const Cursos = () => {
       students: "15 alunos",
       level: "Intermediário",
       price: "R$ 1.500",
-      image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400",
+      image: "https://i.pinimg.com/236x/83/a1/d8/83a1d8310b90e83e051be68434afb82d.jpg",
       topics: ["Técnicas de traço fino", "Design minimalista", "Micro tatuagens", "Precisão em detalhes"]
     },
     {
@@ -61,7 +61,7 @@ const Cursos = () => {
       students: "12 alunos",
       level: "Intermediário",
       price: "R$ 1.600",
-      image: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
+      image: "https://i.pinimg.com/736x/69/7e/34/697e346558fa89d489c2dac697e0b4e8.jpg",
       topics: ["Geometria aplicada", "Mandalas tradicionais", "Simetria perfeita", "Patterns complexos"]
     },
     {
@@ -72,7 +72,7 @@ const Cursos = () => {
       students: "20 alunos",
       level: "Todos os níveis",
       price: "R$ 800",
-      image: "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400",
+      image: "https://i.pinimg.com/236x/e9/f8/62/e9f8624f0e03b4298fbdc19fde36974d.jpg",
       topics: ["Marketing digital", "Gestão financeira", "Atendimento ao cliente", "Precificação"]
     }
   ];
@@ -110,7 +110,7 @@ const Cursos = () => {
   };
 
   return (
-    <div className="pt-20 bg-[#E9E8D4] min-h-screen">
+    <div className="pt-32 bg-secondary/90 min-h-screen">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -120,9 +120,9 @@ const Cursos = () => {
             Aprenda com os melhores profissionais do mercado.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <div className="flex items-center gap-2 bg-secondary/10 px-4 py-2 rounded-full">
-              <Star className="text-secondary" size={20} />
-              <span className="text-secondary font-medium">Certificado Reconhecido</span>
+            <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
+              <Star className="text-primary" size={20} />
+              <span className="text-primary font-medium">Certificado Reconhecido</span>
             </div>
             <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
               <Users className="text-primary" size={20} />
@@ -193,7 +193,7 @@ const Cursos = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-20 text-center bg-gradient-to-r from-primary to-secondary rounded-2xl p-12">
+        <div className="mt-20 text-center bg-gradient-to-r from-primary to-secondary rounded-2xl p-12 mb-10">
           <h2 className="text-3xl font-bold text-white mb-4">Pronto para começar sua jornada?</h2>
           <p className="text-white/90 mb-8 max-w-2xl mx-auto">
             Entre em contato conosco e descubra qual curso é ideal para o seu nível e objetivos. 

@@ -39,8 +39,8 @@ const Contato = () => {
   };
 
   return (
-    <div className="pt-20 bg-[#E9E8D4] min-h-screen">
-      <div className="container mx-auto px-4">
+    <div className="pt-32 bg-secondary/90 min-h-screen">
+      <div className="container mx-auto px-4 mb-10">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Entre em Contato</h1>
@@ -116,8 +116,9 @@ const Contato = () => {
                   <div>
                     <h3 className="font-semibold text-gray-800">Endereço</h3>
                     <p className="text-gray-600">
-                      Rua das Artes, 123 - Centro<br />
-                      São Paulo, SP - CEP 01234-567
+                      Rua Vergueiro 2999 - Vila Mariana<br />
+                      São Paulo - SP<br />
+                      CEP 04101-300
                     </p>
                   </div>
                 </div>
@@ -126,7 +127,7 @@ const Contato = () => {
                   <Phone className="text-secondary mt-1" size={20} />
                   <div>
                     <h3 className="font-semibold text-gray-800">Telefone</h3>
-                    <p className="text-gray-600">(11) 9999-9999</p>
+                    <p className="text-gray-600">(11) 95218-1320</p>
                   </div>
                 </div>
                 
@@ -135,9 +136,10 @@ const Contato = () => {
                   <div>
                     <h3 className="font-semibold text-gray-800">Horário de Funcionamento</h3>
                     <p className="text-gray-600">
-                      Segunda à Sexta: 10h às 20h<br />
-                      Sábado: 9h às 18h<br />
-                      Domingo: Fechado
+                      Segunda somente com hora marcada<br />
+                      Terça: a partir das 9h<br />
+                      Terça à Domingo: 24h<br />
+                      Domingo: até 20h
                     </p>
                   </div>
                 </div>
@@ -147,11 +149,16 @@ const Contato = () => {
             {/* Map Placeholder */}
             <Card className="p-8">
               <h2 className="text-2xl font-bold text-primary mb-6">Nossa Localização</h2>
-              <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <MapPin size={48} className="mx-auto mb-2" />
-                  <p>Mapa da localização</p>
-                  <p className="text-sm">(Placeholder para integração com Google Maps)</p>
+              <div className=" bg-gray-200 rounded-lg flex items-center justify-center">
+                <div className="text-center text-gray-500 w-full">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.479022810896!2d-46.6338946!3d-23.5871475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5b133142b391%3A0xb32c4113d50aa26f!2sVHS%20CORP!5e0!3m2!1spt-BR!2sbr!4v1748900906145!5m2!1spt-BR!2sbr"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className='w-full h-64 md:h-80 rounded-lg'
+                  />
                 </div>
               </div>
             </Card>

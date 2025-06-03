@@ -21,7 +21,7 @@ const Footer = () => {
           {/* Logo e Informações */}
           <div className="space-y-4">
             <img 
-              src="/lovable-uploads/6c90fed9-fe15-42f4-bdb2-32d5a7f26e8d.png"
+              src="/lovable-uploads/logo2.png"
               alt="WALLARCANJO Logo"
               className="h-16 w-auto"
             />
@@ -36,17 +36,18 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <MapPin size={18} strokeWidth={1.5} />
-                <span className="text-white/90">Rua das Artes, 123 - Vila Madalena, São Paulo - SP</span>
+                <span className="text-white/90">Rua Vergueiro, 2999 - Vila Mariana, São Paulo - SP</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={18} strokeWidth={1.5} />
-                <span className="text-white/90">(11) 3456-7890</span>
+                <span className="text-white/90">(11) 95218-1320</span>
               </div>
               <div className="flex items-center gap-3">
                 <Clock size={18} strokeWidth={1.5} />
                 <div>
-                  <p className="text-white/90">Segunda a Sexta: 09:00 - 18:00</p>
-                  <p className="text-white/90">Sábado: 09:00 - 16:00</p>
+                  <p className="text-white/90">Terça à Domingo: 24h</p>
+                  <p className="text-white/90">Terça: a partir das 9h</p>
+                  <p className="text-white/90">Domingo: até 20h</p>
                 </div>
               </div>
             </div>
@@ -62,7 +63,7 @@ const Footer = () => {
                   href={`https://instagram.com/${instagram.replace('@', '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-white/90 hover:text-white transition-colors text-sm"
+                  className="flex items-center gap-2 text-white/90 hover:text-primary transition-colors text-sm"
                 >
                   <Instagram size={16} strokeWidth={1.5} />
                   <span>{instagram}</span>
