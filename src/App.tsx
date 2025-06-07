@@ -10,6 +10,8 @@ import Tatuadores from "./pages/Tatuadores";
 import Cursos from "./pages/Cursos";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
+import WhatsappButton from "@/components/ui/WhatsappButton";
+import WhatsappPopup from "./components/ui/WhatsappPopup";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const App = () => (
           </Routes>
         </div>
       </BrowserRouter>
+      <WhatsappButton />
+      <WhatsappPopup />
     </TooltipProvider>
   </QueryClientProvider>
 );

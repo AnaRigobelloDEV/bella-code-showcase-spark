@@ -1,4 +1,20 @@
 
+@font-face {
+  font-family: 'CSMargiela';
+  src: url('/CSMargiela-Regular_demo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FuturaLight';
+  src: url('/futura light bt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 @tailwind base;
@@ -36,6 +52,8 @@
     --ring: 288 89% 20%;
 
     --radius: 0.5rem;
+    --font-title: 'CSMargiela', Ubuntu, Arial, sans-serif;
+    --font-body: 'FuturaLight', Ubuntu, Arial, sans-serif;
   }
 
   * {
@@ -43,9 +61,14 @@
   }
 
   body {
-    @apply bg-[#E9E8D4] text-foreground font-ubuntu;
+    @apply bg-white text-foreground;
+    font-family: var(--font-body);
     scrollbar-width: thin;
     scrollbar-color: #6D0341 #f1f1f1;
+  }
+
+  h1, h2, h3, h4, h5, h6, .section-heading {
+    font-family: var(--font-title);
   }
 
   html {

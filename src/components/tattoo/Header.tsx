@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [currentLogo, setCurrentLogo] = useState('/lovable-uploads/logo2.png');
   const location = useLocation();
 
   useEffect(() => {
@@ -14,8 +15,18 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
+    // Listener para o evento personalizado de troca de logo
+    const handleLogoChange = (event) => {
+      setCurrentLogo(`/lovable-uploads/${event.detail}`);
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('changeLogo', handleLogoChange);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('changeLogo', handleLogoChange); // <--- Remove o listener
+    };
   }, []);
 
   const isActive = (path: string) => location.pathname === path;
@@ -23,19 +34,23 @@ const Header = () => {
   return (
     <header className={cn(
       "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-      isScrolled ? "bg-white/95 backdrop-blur-sm shadow-lg py-2" : "bg-white py-4"
+      isScrolled ? "bg-transparent backdrop-blur-sm shadow-lg py-2" : "py-4"
     )}>
       <div className="container mx-auto flex justify-between items-center px-4 py-[-20rem]">
+        {isScrolled ? 
         <Link to="/" className="flex items-center ">
           <img 
-            src="/lovable-uploads/logo1.png" 
+            src={currentLogo} 
             alt="WALLARCANJO Logo"
-            className="h-38 w-36 object-cover "
+            className="h-16 w-auto object-cover "
           />
         </Link>
+        :
+        <div></div>
+        }
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex space-x-20">
           {[
             { name: 'Início', path: '/' },
             { name: 'Tatuadores', path: '/tatuadores' },
@@ -46,10 +61,10 @@ const Header = () => {
               key={item.name}
               to={item.path}
               className={cn(
-                "font-medium transition-colors relative py-2",
+                "font-medium text-xl transition-colors relative py-2",
                 isActive(item.path) 
                   ? "text-primary" 
-                  : "text-gray-700 hover:text-primary"
+                  : "text-gray-500 hover:text-primary"
               )}
             >
               {item.name}
@@ -65,7 +80,7 @@ const Header = () => {
           className="md:hidden text-gray-700 hover:text-primary"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileMenuOpen ? <X size={34} /> : <Menu size={34} />}
         </button>
       </div>
 
@@ -85,7 +100,7 @@ const Header = () => {
                   to={item.path}
                   onClick={() => setMobileMenuOpen(false)}
                   className={cn(
-                    "font-medium py-2 transition-colors",
+                    "font-medium text-xl py-2 transition-colors",
                     isActive(item.path) 
                       ? "text-primary" 
                       : "text-gray-700 hover:text-primary"
