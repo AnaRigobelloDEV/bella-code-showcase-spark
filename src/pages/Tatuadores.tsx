@@ -12,7 +12,7 @@ const Tatuadores = () => {
       name: "Wall",
       bio: "Fundadora do WALLARCANJO, Wall é uma artista visionária com mais de 15 anos de experiência. Especialista em realismo e fine line, ela transformou sua paixão pela arte em um dos estúdios mais respeitados da cidade.",
       instagram: "@wall_tattoo",
-      profileImage: "https://i.pinimg.com/236x/2e/48/9b/2e489bf8ea547b58f98851b6b49e434c.jpg",
+      profileImage: "./lovable-uploads/bgHero.png",
       workImages: [
         "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
         "./lovable-uploads/tattooTeste1.jpg",
@@ -165,7 +165,7 @@ const Tatuadores = () => {
                     <img 
                       src={artist.profileImage}
                       alt={artist.name}
-                      className="w-24 h-24 rounded-full object-cover"
+                      className="w-48 h-48 rounded-full object-cover"
                     />
                     <div>
                       <h2 className="text-3xl font-bold text-primary mb-2">{artist.name}</h2>

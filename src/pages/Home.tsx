@@ -23,7 +23,7 @@ const Home = () => {
       specialty: "Realismo e Fine Line",
       instagram: "@wall_tattoo",
       image:
-        "https://i.pinimg.com/236x/2e/48/9b/2e489bf8ea547b58f98851b6b49e434c.jpg",
+        "./lovable-uploads/bgHero.png",
     },
     {
       id: 2,
@@ -54,7 +54,7 @@ const Home = () => {
     // Define o estado inicial de todos os elementos para que comecem invisíveis e fora da tela
     gsap.set([logoRef.current, titleRef.current, textRef.current, buttonsRef.current], { opacity: 0, y: 50 });
     // Define o background inicialmente como 'fixed' para ser estático
-    gsap.set(bgRef.current, { backgroundAttachment: "scroll", backgroundPosition: "center center" });
+    gsap.set(bgRef.current, { backgroundAttachment: "fixed", backgroundPosition: "center center" });
 
      // ScrollTrigger para mudar a logo no Header
      ScrollTrigger.create({
@@ -131,9 +131,9 @@ gsap.to(logoRef.current, { opacity: 1, y: 0, duration: 0.5 })
       onUpdate: (self) => {
         if (self.isActive) {
           gsap.to(bgRef.current, {
-            backgroundPosition: `top ${-self.progress * 100}px`, // Ajuste o 200 para mais ou menos paralaxe
+            backgroundPosition: `top ${-self.progress * 200}px`, // Ajuste o 200 para mais ou menos paralaxe
             ease: "none",
-            overwrite: false, // Garante que apenas uma animação de backgroundPosition esteja ativa
+            overwrite: true, // Garante que apenas uma animação de backgroundPosition esteja ativa
           });
         }
       },
@@ -164,7 +164,7 @@ gsap.to(logoRef.current, { opacity: 1, y: 0, duration: 0.5 })
         <div className="absolute inset-0 bg-black/20"></div>
         <div
           ref={bgRef}
-          className="absolute inset-0 bg- bg-no-repeat bg-center opacity-80"
+          className="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-80"
           style={{
             backgroundImage: "url('./lovable-uploads/bgHero.png')",
             backgroundAttachment: "fixed",
@@ -211,7 +211,7 @@ gsap.to(logoRef.current, { opacity: 1, y: 0, duration: 0.5 })
       </section>
 
       {/* Studio Proposal Section */}
-      <section ref={proposalSectionRef} className="py-20 mt-[730px] md:mt-[900px] bg-white">
+      <section ref={proposalSectionRef} className="py-20 mt-[730px] md:mt-[550px] bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-primary mb-8">
