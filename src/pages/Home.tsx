@@ -20,8 +20,8 @@ const Home = () => {
       id: 1,
       name: "Wall",
       title: "Fundadora & Tatuadora",
-      specialty: "Realismo e Fine Line",
-      instagram: "@wall_tattoo",
+      specialty: "Realismo e Geometrico",
+      instagram: "@walarcanjo",
       image:
         "./lovable-uploads/bgHero.png",
     },

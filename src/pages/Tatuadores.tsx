@@ -9,9 +9,9 @@ const Tatuadores = () => {
   const artists = [
     {
       id: 1,
-      name: "Wall",
-      bio: "Fundadora do WALLARCANJO, Wall é uma artista visionária com mais de 15 anos de experiência. Especialista em realismo e fine line, ela transformou sua paixão pela arte em um dos estúdios mais respeitados da cidade.",
-      instagram: "@wall_tattoo",
+      name: "Wall Arcanjo",
+      bio: "Fundadora do WALL ARCANJO, Wall é uma artista visionária com mais de 15 anos de experiência. Especialista em realismo e geometrico, ela transformou sua paixão pela arte em um dos estúdios mais respeitados da cidade.",
+      instagram: "@walarcanjo",
       profileImage: "./lovable-uploads/bgHero.png",
       workImages: [
         "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
@@ -117,6 +117,19 @@ const Tatuadores = () => {
       bio: "Mestra em lettering e caligrafia, Ana transforma palavras em arte. Suas tatuagens de frases e nomes são reconhecidas pela elegância e legibilidade perfeita.",
       instagram: "@ana_script",
       profileImage: "https://i.pinimg.com/236x/83/23/e9/8323e93c73d0c0ad6204125c6f7b9f9a.jpg",
+      workImages: [
+        "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
+        "./lovable-uploads/tattooTeste1.jpg",
+        "./lovable-uploads/tattooTeste2.jpg",
+        "./lovable-uploads/tattooTeste3.jpg"
+      ]
+    },
+    {
+      id: 10,
+      name: "Luiza Sanches",
+      bio: "Mestra em lettering e caligrafia, Luiza transforma palavras em arte. Suas tatuagens de frases e nomes são reconhecidas pela elegância e legibilidade perfeita.",
+      instagram: "@ana_script",
+      profileImage: "https://i.pinimg.com/736x/a9/df/33/a9df339ff059dede8342b12fda88a1c7.jpg",
       workImages: [
         "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
         "./lovable-uploads/tattooTeste1.jpg",
