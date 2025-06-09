@@ -75,7 +75,7 @@ const Footer = () => {
 
         <div className="border-t border-white/20 mt-8 pt-6 text-center">
           <p className="text-white/70">
-            © 2024 WALLARCANJO. Todos os direitos reservados.
+            © 2025 WALL ARCANJO. Todos os direitos reservados.
           </p>
         </div>
       </div>

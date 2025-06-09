@@ -59,7 +59,7 @@ const Home = () => {
      // ScrollTrigger para mudar a logo no Header
      ScrollTrigger.create({
       trigger: proposalSectionRef.current, // Gatilho é a seção "Nossa Proposta"
-      start: "top 10%", // Quando o topo da seção atinge 10% do topo da viewport (90% percorrido)
+      start: "top -90%", // Quando o topo da seção atinge 10% do topo da viewport (90% percorrido)
       // start: "top 90%", // Se você quiser 90% da altura da *seção* visível, use "top 90%"
       end: "bottom top", // Isso significa que o evento vai durar até o final da seção
       onEnter: () => {
@@ -89,13 +89,13 @@ const Home = () => {
         end: "bottom top", // Termina quando o fundo da seção hero atinge o topo da viewport
         scrub: true, // Suaviza a animação com o scroll
         pin: true, // Fixa a seção hero na tela enquanto a animação ocorre
-        pinSpacing: false, // Evita que o pino adicione espaçamento extra
+        pinSpacing: true, // Evita que o pino adicione espaçamento extra
       },
     });
 
     // Logo desaparece enquanto o título aparece
     tl.to(logoRef.current, { opacity: 0, y: -50, duration: 0.5 }, 0) // Começa no início da timeline
-      .to(titleRef.current, { opacity: 1, y: 0, duration: 0.7 }, 0.2); // Atraso de 0.2 segundos após o início
+      .to(titleRef.current, { opacity: 1, y: 0, duration: 0.7 }, 0.4); // Atraso de 0.4 segundos após o início
 
     // Texto aparece
     tl.to(textRef.current, { opacity: 1, y: 0, duration: 0.7 }, 0.5); // Atraso de 0.5 segundos
@@ -187,8 +187,8 @@ gsap.to(logoRef.current, { opacity: 1, y: 0, duration: 0.5 })
           </h1>
           </div>
           <p ref={textRef} className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-            No WALLARCANJO, transformamos suas ideias em obras de arte únicas.
-            Com mais de 10 anos de experiência, nosso estúdio une tradição e
+            No WALL ARCANJO, transformamos suas ideias em obras de arte únicas.
+            Com mais de 15 anos de experiência, nosso estúdio une tradição e
             inovação para criar tatuagens que contam sua história.
           </p>
           <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -211,7 +211,7 @@ gsap.to(logoRef.current, { opacity: 1, y: 0, duration: 0.5 })
       </section>
 
       {/* Studio Proposal Section */}
-      <section ref={proposalSectionRef} className="py-20 mt-[730px] md:mt-[550px] bg-white">
+      <section ref={proposalSectionRef} className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-primary mb-8">
@@ -279,7 +279,7 @@ gsap.to(logoRef.current, { opacity: 1, y: 0, duration: 0.5 })
               Nossos Artistas em Destaque
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Conheça os tatuadores que fazem do WALLARCANJO referência em
+              Conheça os tatuadores que fazem do WALL ARCANJO referência em
               qualidade e criatividade
             </p>
           </div>
