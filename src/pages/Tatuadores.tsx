@@ -165,7 +165,7 @@ const Tatuadores = () => {
                     <img 
                       src={artist.profileImage}
                       alt={artist.name}
-                      className="w-48 h-48 rounded-full object-cover"
+                      className="w-32 h-32 rounded-full object-cover"
                     />
                     <div>
                       <h2 className="text-3xl font-bold text-primary mb-2">{artist.name}</h2>
