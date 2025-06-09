@@ -18,7 +18,7 @@ const Home = () => {
   const featuredArtists = [
     {
       id: 1,
-      name: "Wall",
+      name: "Wall Arcanjo",
       title: "Fundadora & Tatuadora",
       specialty: "Realismo e Geometrico",
       instagram: "@walarcanjo",
@@ -27,7 +27,7 @@ const Home = () => {
     },
     {
       id: 2,
-      name: "Sérgio Lima",
+      name: "Sérgio",
       title: "Tatuador Principal",
       specialty: "Black Work e Ornamental",
       instagram: "@sergio_lima_tattoo",
