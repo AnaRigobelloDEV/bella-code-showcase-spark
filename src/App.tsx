@@ -4,12 +4,12 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/tattoo/Header";
-import Home from "./pages/Home";
-import Tatuadores from "./pages/Tatuadores";
-import Cursos from "./pages/Cursos";
-import Contato from "./pages/Contato";
-import NotFound from "./pages/NotFound";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Tatuadores from "./components/Tatuadores";
+import Cursos from "./components/Cursos";
+import Contato from "./components/Contato";
+import NotFound from "./components/NotFound";
 import WhatsappButton from "@/components/ui/WhatsappButton";
 import WhatsappPopup from "./components/ui/WhatsappPopup";
 

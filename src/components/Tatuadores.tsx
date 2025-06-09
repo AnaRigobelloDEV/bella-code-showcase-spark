@@ -3,7 +3,7 @@ import { Card } from '@/components/ui/card';
 import { Instagram } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Footer from '@/components/tattoo/Footer';
+import Footer from '@/components/Footer';
 
 const Tatuadores = () => {
   const artists = [
@@ -12,12 +12,12 @@ const Tatuadores = () => {
       name: "Wall Arcanjo",
       bio: "Fundadora do WALL ARCANJO, Wall é uma artista visionária com mais de 15 anos de experiência. Especialista em realismo e geometrico, ela transformou sua paixão pela arte em um dos estúdios mais respeitados da cidade.",
       instagram: "@walarcanjo",
-      profileImage: "./lovable-uploads/bgHero.png",
+      profileImage: "./images/Tatuadores/Wall/perfil.png",
       workImages: [
         "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./lovable-uploads/tattooTeste1.jpg",
-        "./lovable-uploads/tattooTeste2.jpg",
-        "./lovable-uploads/tattooTeste3.jpg"
+        "./images/tattooTeste1.jpg",
+        "./images/tattooTeste2.jpg",
+        "./images/tattooTeste3.jpg"
       ]
     },
     {
@@ -28,9 +28,9 @@ const Tatuadores = () => {
       profileImage: "https://i.pinimg.com/236x/34/05/5b/34055b587c5830da3ee49c85fa3de482.jpg",
       workImages: [
         "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./lovable-uploads/tattooTeste1.jpg",
-        "./lovable-uploads/tattooTeste2.jpg",
-        "./lovable-uploads/tattooTeste3.jpg"
+        "./images/tattooTeste1.jpg",
+        "./images/tattooTeste2.jpg",
+        "./images/tattooTeste3.jpg"
       ]
     },
     {
@@ -41,22 +41,22 @@ const Tatuadores = () => {
       profileImage: "https://i.pinimg.com/236x/a8/1c/8f/a81c8f3f415ce0c58ebc24aaccc5321d.jpg",
       workImages: [
         "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./lovable-uploads/tattooTeste1.jpg",
-        "./lovable-uploads/tattooTeste2.jpg",
-        "./lovable-uploads/tattooTeste3.jpg"
+        "./images/tattooTeste1.jpg",
+        "./images/tattooTeste2.jpg",
+        "./images/tattooTeste3.jpg"
       ]
     },
     {
       id: 4,
-      name: "Diego Santos",
-      bio: "Especialista em traditional e neo traditional, Diego combina técnicas clássicas com um toque contemporâneo. Seus trabalhos são conhecidos pela precisão e pela riqueza de detalhes.",
-      instagram: "@diego_traditional",
-      profileImage: "https://i.pinimg.com/236x/25/14/79/251479278227cee9a2007a8f714ca1d5.jpg",
+      name: "Giovanna Cardoso",
+      bio: "Giovanna Cardoso é uma tatuadora iniciante com um ano de experiência ativa, mas já com cinco anos de imersão no universo da tatuagem. Após concluir seus estudos com a renomada Wall, ela agora tem a oportunidade de trabalhar ao lado dela no estúdio. Seu estilo principal é o blackwork, mas Giovanna é versátil e adora criar trabalhos exclusivos, dando vida às ideias dos clientes com sua própria visão artística.",
+      instagram: "@giocardoso",
+      profileImage: "./images/Tatuadores/Giovanna/perfil.jpg",
       workImages: [
-        "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./lovable-uploads/tattooTeste1.jpg",
-        "./lovable-uploads/tattooTeste2.jpg",
-        "./lovable-uploads/tattooTeste3.jpg"
+        "./images/Tatuadores/Giovanna/tattoo1.jpg",
+        "./images/Tatuadores/Giovanna/tattoo2.jpg",
+        "./images/Tatuadores/Giovanna/tattoo3.jpg",
+        "./images/Tatuadores/Giovanna/tattoo4.jpg"
       ]
     },
     {
@@ -67,9 +67,9 @@ const Tatuadores = () => {
       profileImage: "https://i.pinimg.com/236x/57/cb/13/57cb138bfc75ab4516250874676a577d.jpg",
       workImages: [
         "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./lovable-uploads/tattooTeste1.jpg",
-        "./lovable-uploads/tattooTeste2.jpg",
-        "./lovable-uploads/tattooTeste3.jpg"
+        "./images/tattooTeste1.jpg",
+        "./images/tattooTeste2.jpg",
+        "./images/tattooTeste3.jpg"
       ]
     },
     {
@@ -80,9 +80,9 @@ const Tatuadores = () => {
       profileImage: "https://i.pinimg.com/236x/1c/b7/5e/1cb75eae2eabd17971faa69f26edba95.jpg",
       workImages: [
         "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./lovable-uploads/tattooTeste1.jpg",
-        "./lovable-uploads/tattooTeste2.jpg",
-        "./lovable-uploads/tattooTeste3.jpg"
+        "./images/tattooTeste1.jpg",
+        "./images/tattooTeste2.jpg",
+        "./images/tattooTeste3.jpg"
       ]
     },
     {
@@ -93,9 +93,9 @@ const Tatuadores = () => {
       profileImage: "https://i.pinimg.com/236x/dd/59/82/dd5982a8a5435e77a41d034563a314c5.jpg",
       workImages: [
         "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./lovable-uploads/tattooTeste1.jpg",
-        "./lovable-uploads/tattooTeste2.jpg",
-        "./lovable-uploads/tattooTeste3.jpg"
+        "./images/tattooTeste1.jpg",
+        "./images/tattooTeste2.jpg",
+        "./images/tattooTeste3.jpg"
       ]
     },
     {
@@ -106,9 +106,9 @@ const Tatuadores = () => {
       profileImage: "https://i.pinimg.com/236x/c1/e3/cf/c1e3cf5da513e943f82f3bdcebd03402.jpg",
       workImages: [
         "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./lovable-uploads/tattooTeste1.jpg",
-        "./lovable-uploads/tattooTeste2.jpg",
-        "./lovable-uploads/tattooTeste3.jpg"
+        "./images/tattooTeste1.jpg",
+        "./images/tattooTeste2.jpg",
+        "./images/tattooTeste3.jpg"
       ]
     },
     {
@@ -119,9 +119,9 @@ const Tatuadores = () => {
       profileImage: "https://i.pinimg.com/236x/83/23/e9/8323e93c73d0c0ad6204125c6f7b9f9a.jpg",
       workImages: [
         "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./lovable-uploads/tattooTeste1.jpg",
-        "./lovable-uploads/tattooTeste2.jpg",
-        "./lovable-uploads/tattooTeste3.jpg"
+        "./images/tattooTeste1.jpg",
+        "./images/tattooTeste2.jpg",
+        "./images/tattooTeste3.jpg"
       ]
     },
     {
@@ -132,9 +132,9 @@ const Tatuadores = () => {
       profileImage: "https://i.pinimg.com/736x/a9/df/33/a9df339ff059dede8342b12fda88a1c7.jpg",
       workImages: [
         "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./lovable-uploads/tattooTeste1.jpg",
-        "./lovable-uploads/tattooTeste2.jpg",
-        "./lovable-uploads/tattooTeste3.jpg"
+        "./images/tattooTeste1.jpg",
+        "./images/tattooTeste2.jpg",
+        "./images/tattooTeste3.jpg"
       ]
     }
   ];

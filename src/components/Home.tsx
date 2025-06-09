@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Instagram } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Footer from "@/components/tattoo/Footer";
+import Footer from "@/components/Footer";
 
 const Home = () => {
   const logoRef = useRef(null);
@@ -23,7 +23,7 @@ const Home = () => {
       specialty: "Realismo e Geometrico",
       instagram: "@walarcanjo",
       image:
-        "./lovable-uploads/bgHero.png",
+        "./images/bgHero.png",
     },
     {
       id: 2,
@@ -166,7 +166,7 @@ gsap.to(logoRef.current, { opacity: 1, y: 0, duration: 0.5 })
           ref={bgRef}
           className="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-80"
           style={{
-            backgroundImage: "url('./lovable-uploads/bgHero.png')",
+            backgroundImage: "url('./images/bgHero.png')",
             backgroundAttachment: "fixed",
           }}
         ></div>
@@ -175,7 +175,7 @@ gsap.to(logoRef.current, { opacity: 1, y: 0, duration: 0.5 })
           <Link to="/" className="flex justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
             <img
               ref={logoRef}
-              src="/lovable-uploads/logo2.png"
+              src="/images/logo2.png"
               alt="WALLARCANJO Logo"
               className="h-28 w-auto object-cover "
             />
@@ -221,7 +221,7 @@ gsap.to(logoRef.current, { opacity: 1, y: 0, duration: 0.5 })
               <div className="text-center">
                 <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
                   <img
-                    src="./lovable-uploads/ink.png"
+                    src="./images/ink.png"
                     alt="Arte"
                     className="h-12 w-auto object-cover"
                   />
@@ -237,7 +237,7 @@ gsap.to(logoRef.current, { opacity: 1, y: 0, duration: 0.5 })
               <div className="text-center">
                 <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
                   <img
-                    src="./lovable-uploads/protect.png"
+                    src="./images/protect.png"
                     alt="Arte"
                     className="h-10 w-auto object-cover"
                   />
@@ -253,7 +253,7 @@ gsap.to(logoRef.current, { opacity: 1, y: 0, duration: 0.5 })
               <div className="text-center">
                 <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
                   <img
-                    src="./lovable-uploads/diploma.png"
+                    src="./images/diploma.png"
                     alt="Arte"
                     className="h-10 w-auto object-cover"
                   />

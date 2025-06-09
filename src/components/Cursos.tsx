@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
+import { Link } from "react-router-dom";
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Clock, Users, Star, Award } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Footer from '@/components/tattoo/Footer';
+import Footer from '@/components/Footer';
 
 const Cursos = () => {
   const courses = [
@@ -156,7 +157,7 @@ const Cursos = () => {
                 </div>
                 
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{course.name}</h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">{course.description}</p>
+                <p className="text-gray-600 mb-4 line-clamp-3 min-h-[4.5rem]">{course.description}</p>
                 
                 <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
                   <div className="flex items-center gap-1">
@@ -184,7 +185,7 @@ const Cursos = () => {
                   </ul>
                 </div>
                 
-                <Button className="w-full bg-primary hover:bg-primary-dark text-white">
+                <Button className="w-full bg-primary hover:bg-primary-dark text-white mt-auto">
                   Saiba Mais
                 </Button>
               </div>
@@ -200,7 +201,7 @@ const Cursos = () => {
             Nossa equipe está pronta para ajudar você a se tornar um tatuador profissional.
           </p>
           <Button className="bg-white text-primary hover:bg-gray-100 px-8 py-3 text-lg font-semibold">
-            Fale Conosco
+          <Link to="/contato">Fale conosco</Link>
           </Button>
         </div>
       </div>

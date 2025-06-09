@@ -1,73 +1,83 @@
 
-import { Instagram, Github, Linkedin, Youtube, MessageCircle } from 'lucide-react';
+import { Instagram, Phone, MapPin, Clock } from 'lucide-react';
 
 const Footer = () => {
-  const year = new Date().getFullYear();
-  
+  const allTattooArtists = [
+    "@walarcanjo",
+    "@perfil 2", 
+    "@perfil 3",
+    "@giocardoso",
+    "@perfil 5",
+    "@perfil 6",
+    "@perfil 7",
+    "@perfil 8",
+    "@perfil 9",
+    "@perfil 10",
+  ];
+
   return (
-    <footer className="bg-black py-12 px-4 border-t border-gray-800">
-      <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
-            <h2 className="text-gold text-2xl font-bold">
-              BELLA<span className="text-cherry">CODE</span>
-            </h2>
-            <p className="text-white/70 mt-2">Transformando ideias em código</p>
-          </div>
-          
-          <div className="flex flex-col items-center md:items-end">
-            <div className="flex space-x-4 mb-4">
-              <a
-                href="https://instagram.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-white hover:text-gold transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={24} />
-              </a>
-              <a
-                href="https://github.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-white hover:text-gold transition-colors"
-                aria-label="GitHub"
-              >
-                <Github size={24} />
-              </a>
-              <a
-                href="https://linkedin.com/in/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-white hover:text-gold transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a
-                href="https://youtube.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-white hover:text-gold transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube size={24} />
-              </a>
-              <a
-                href="https://api.whatsapp.com/send?phone=5511999999999"
-                target="_blank"
-                rel="noreferrer"
-                className="text-white hover:text-gold transition-colors"
-                aria-label="WhatsApp"
-              >
-                <MessageCircle size={24} />
-              </a>
-            </div>
-            
-            <p className="text-white/50 text-sm">
-              &copy; {year} BELLA CODE. Todos os direitos reservados.
+    <footer className="bg-[#09626A] text-white py-12">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Logo e Informações */}
+          <div className="space-y-4">
+            <img 
+              src="/images/logo2.png"
+              alt="WALLARCANJO Logo"
+              className="h-16 w-auto"
+            />
+            <p className="text-white/90">
+              Arte que marca sua história. Estúdio de tatuagem e academia profissionalizante.
             </p>
           </div>
+
+          {/* Contato */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-white">Contato</h3>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <MapPin size={18} strokeWidth={1.5} />
+                <span className="text-white/90">Rua Vergueiro, 2999 - Vila Mariana, São Paulo - SP</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone size={18} strokeWidth={1.5} />
+                <span className="text-white/90">(11) 95218-1320</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Clock size={18} strokeWidth={1.5} />
+                <div>
+                  <p className="text-white/90">Terça à Domingo: 24h</p>
+                  <p className="text-white/90">Terça: a partir das 9h</p>
+                  <p className="text-white/90">Domingo: até 20h</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Instagram dos Tatuadores */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-white">Nossos Artistas</h3>
+            <div className="grid grid-cols-2 gap-2">
+              {allTattooArtists.map((instagram, index) => (
+                <a
+                  key={index}
+                  href={`https://instagram.com/${instagram.replace('@', '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-white/90 hover:text-primary transition-colors text-sm"
+                >
+                  <Instagram size={16} strokeWidth={1.5} />
+                  <span>{instagram}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-white/20 mt-8 pt-6 text-center">
+          <p className="text-white/70">
+            © 2025 WALL ARCANJO. Todos os direitos reservados.
+          </p>
         </div>
       </div>
     </footer>
