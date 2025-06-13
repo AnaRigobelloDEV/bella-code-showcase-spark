@@ -27,21 +27,21 @@ const Home = () => {
     },
     {
       id: 2,
-      name: "Sérgio",
+      name: "Rodrigo Cunha",
       title: "Tatuador Principal",
       specialty: "Black Work e Ornamental",
-      instagram: "@sergio_lima_tattoo",
+      instagram: "@cunha.tattoo",
       image:
-        "https://i.pinimg.com/236x/34/05/5b/34055b587c5830da3ee49c85fa3de482.jpg",
+        "./images/Tatuadores/Rodrigo/perfil.jpg",
     },
     {
       id: 3,
-      name: "Paty",
+      name: "Michele Moura",
       title: "Especialista em Cores",
       specialary: "Aquarela e New School",
-      instagram: "@paty_color_tattoo",
+      instagram: "@michelemouralash",
       image:
-        "https://i.pinimg.com/236x/a8/1c/8f/a81c8f3f415ce0c58ebc24aaccc5321d.jpg",
+        "./images/Tatuadores/Michele/perfil.jpeg",
     },
   ];
 

@@ -22,28 +22,28 @@ const Tatuadores = () => {
     },
     {
       id: 2,
-      name: "Sérgio Lima",
-      bio: "Reconhecido nacionalmente por suas técnicas em black work e ornamental, Sérgio traz 12 anos de experiência e uma abordagem única que mistura tradição e modernidade em cada peça.",
-      instagram: "@sergio_lima_tattoo",
-      profileImage: "https://i.pinimg.com/236x/34/05/5b/34055b587c5830da3ee49c85fa3de482.jpg",
+      name: "Rodrigo Cunha",
+      bio: "Rodrigo Cunha é um tatuador com 8 anos de experiência, cujo interesse pela tatuagem surgiu através da cena hardcore. Ele sempre admirou os artistas das bandas que apreciava com suas tatuagens tradicionais, sentindo-se atraído pela expressão de rebeldia por meio da arte, seja ela sonora ou na pele. Essa paixão deu origem ao seu principal interesse no estilo tradicional americano, popularmente conhecido como Old School. Rodrigo também aprecia e realiza tatuagens Fine Line, aplicando um toque de suavidade que, por vezes, combina com elementos do Old School. Dessa forma, ele transita entre esses estilos, inserindo um pouco de sua personalidade única em cada um de seus trabalhos.",
+      instagram: "@cunha.tattoo",
+      profileImage: "./images/Tatuadores/Rodrigo/perfil.jpg",
       workImages: [
-        "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./images/tattooTeste1.jpg",
-        "./images/tattooTeste2.jpg",
-        "./images/tattooTeste3.jpg"
+        "./images/Tatuadores/Rodrigo/tattoo1.jpg",
+        "./images/Tatuadores/Rodrigo/tattoo2.jpg",
+        "./images/Tatuadores/Rodrigo/tattoo3.jpg",
+        "./images/Tatuadores/Rodrigo/tattoo4.jpg"
       ]
     },
     {
       id: 3,
-      name: "Paty",
-      bio: "Especialista em tatuagens coloridas, Paty é mestre em aquarela e new school. Sua criatividade e técnica impecável fazem dela uma das artistas mais procuradas para trabalhos vibrantes e únicos.",
-      instagram: "@paty_color_tattoo",
-      profileImage: "https://i.pinimg.com/236x/a8/1c/8f/a81c8f3f415ce0c58ebc24aaccc5321d.jpg",
+      name: "Michele Moura",
+      bio: "Michele Moura, aos 40 anos, possui 17 anos de atuação na área da beleza. Ela é uma profissional multifacetada, especializada em micropigmentação, tatuagem e lash design, além de ministrar cursos nessas áreas. Seu propósito de vida é claro: elevar a autoestima das pessoas e eternizar momentos marcantes através da arte em suas diversas formas de expressão.",
+      instagram: "@michelemouralash",
+      profileImage: "./images/Tatuadores/Michele/perfil.jpeg",
       workImages: [
-        "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./images/tattooTeste1.jpg",
-        "./images/tattooTeste2.jpg",
-        "./images/tattooTeste3.jpg"
+        "./images/Tatuadores/Michele/tattoo1.jpeg",
+        "./images/Tatuadores/Michele/tattoo2.jpeg",
+        "./images/Tatuadores/Michele/tattoo3.jpeg",
+        "./images/Tatuadores/Michele/tattoo4.jpeg"
       ]
     },
     {
@@ -61,28 +61,28 @@ const Tatuadores = () => {
     },
     {
       id: 5,
-      name: "Marina Flores",
-      bio: "Artista delicada especializada em micro tatuagens e botanicals. Marina tem o dom de criar peças minimalistas que carregam grande significado e beleza.",
-      instagram: "@marina_micro",
-      profileImage: "https://i.pinimg.com/236x/57/cb/13/57cb138bfc75ab4516250874676a577d.jpg",
+      name: "Kathlyn Sousa",
+      bio: "Kathlyn Nascimento de Sousa atua como tatuadora há cerca de 4 anos. Seu primeiro contato com a tatuagem surgiu através da inspiração de um amigo tatuador, o que a motivou a mergulhar profundamente nesse universo. Desde então, Kathlyn tem se dedicado intensamente ao estudo e à prática da arte na pele, passando por diversas formações e atendimentos que solidificaram sua técnica, aprimoraram seu olhar artístico e fortaleceram sua conexão com cada projeto que realiza. Seu estilo transita com fluidez entre personagens, elementos botânicos e composições autorais, sempre com um olhar atento à estética Art Nouveau e ao neotradicional, estilo pelo qual nutre grande paixão e no qual busca constante especialização.",
+      instagram: "@kathynip_arts",
+      profileImage: "./images/Tatuadores/Kathlyn/perfil.jpeg",
       workImages: [
-        "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./images/tattooTeste1.jpg",
-        "./images/tattooTeste2.jpg",
-        "./images/tattooTeste3.jpg"
+        "./images/Tatuadores/Kathlyn/tattoo1.jpeg",
+        "./images/Tatuadores/Kathlyn/tattoo2.jpeg",
+        "./images/Tatuadores/Kathlyn/tattoo3.jpeg",
+        "./images/Tatuadores/Kathlyn/tattoo4.jpeg"
       ]
     },
     {
       id: 6,
-      name: "Rafael Dark",
-      bio: "Mestre em horror e dark art, Rafael cria peças que impressionam pela intensidade e realismo. Sua expertise em sombreamento e contrastes é incomparável.",
-      instagram: "@rafael_dark_art",
-      profileImage: "https://i.pinimg.com/236x/1c/b7/5e/1cb75eae2eabd17971faa69f26edba95.jpg",
+      name: "Rogério de Araújo",
+      bio: "Rogério de Araújo, conhecido como MAGAL TATTOO, iniciou sua jornada profissional em 1994, aos 19 anos, em um estúdio na renomada Galeria do Rock. Aos 24 anos, inaugurou seu primeiro estúdio na cidade de São Paulo, na região do Tatuapé. No ano 2000, com 26 anos, Magal abriu um estúdio no bairro de São Mateus, que se tornou o primeiro da região e é referência para profissionais e clientes amantes da arte da tatuagem até os dias atuais. Com 31 anos de experiência na área da tatuagem e piercing, Magal Tattoo, além de artista e profissional, dedica-se ao ensino da arte da tatuagem. Ele compartilha seu conhecimento com aqueles que desejam iniciar nessa maravilhosa arte, seja para formar futuros profissionais ou para artistas que buscam expandir seus horizontes criativos. Como ele mesmo diz: A persistência leva à perfeição.",
+      instagram: "@magaltattoo",
+      profileImage: "./images/Tatuadores/Rogerio/perfil.jpg",
       workImages: [
-        "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./images/tattooTeste1.jpg",
-        "./images/tattooTeste2.jpg",
-        "./images/tattooTeste3.jpg"
+        "./images/Tatuadores/Rogerio/tattoo1.jpeg",
+        "./images/Tatuadores/Rogerio/tattoo2.jpeg",
+        "./images/Tatuadores/Rogerio/tattoo3.jpeg",
+        "./images/Tatuadores/Rogerio/tattoo4.jpeg"
       ]
     },
     {
