@@ -22,6 +22,19 @@ const Tatuadores = () => {
     },
     {
       id: 2,
+      name: "Telmo Grabher",
+      bio: "Telmo Grabher é um tatuador profissional com mais de 25 anos de experiência, consolidando sua atuação em Brasília – DF e com forte presença também em São Paulo. Com formação em arquitetura e design pela Universidade de Brasília (UnB), Telmo encontrou na tatuagem uma forma de expressão artística profunda, que une técnica, simbolismo e ancestralidade. Ele é especialista em trabalhos tribais samoanos e polinésios, designs geométricos de alta precisão e blackwork, sendo amplamente reconhecido por seus traços marcantes, composição harmoniosa e projetos personalizados, desenvolvidos em estreita colaboração com cada cliente. Seu grande diferencial reside no domínio da técnica freehand, onde desenha diretamente na pele, mantendo total fidelidade às tradições culturais que representa. ",
+      instagram: "@telmograbhertattoo",
+      profileImage: "./images/Tatuadores/Telmo/perfil.jpeg",
+      workImages: [
+        "./images/Tatuadores/Telmo/work1.jpeg",
+        "./images/Tatuadores/Telmo/work2.jpeg",
+        "./images/Tatuadores/Telmo/work3.jpeg",
+        "./images/Tatuadores/Telmo/work4.jpeg"
+      ]
+    },
+    {
+      id: 3,
       name: "Rodrigo Cunha",
       bio: "Rodrigo Cunha é um tatuador com 8 anos de experiência, cujo interesse pela tatuagem surgiu através da cena hardcore. Ele sempre admirou os artistas das bandas que apreciava com suas tatuagens tradicionais, sentindo-se atraído pela expressão de rebeldia por meio da arte, seja ela sonora ou na pele. Essa paixão deu origem ao seu principal interesse no estilo tradicional americano, popularmente conhecido como Old School. Rodrigo também aprecia e realiza tatuagens Fine Line, aplicando um toque de suavidade que, por vezes, combina com elementos do Old School. Dessa forma, ele transita entre esses estilos, inserindo um pouco de sua personalidade única em cada um de seus trabalhos.",
       instagram: "@cunha.tattoo",
@@ -31,19 +44,6 @@ const Tatuadores = () => {
         "./images/Tatuadores/Rodrigo/work2.jpg",
         "./images/Tatuadores/Rodrigo/work3.jpg",
         "./images/Tatuadores/Rodrigo/work4.jpg"
-      ]
-    },
-    {
-      id: 3,
-      name: "Michele Moura",
-      bio: "Michele Moura, aos 40 anos, possui 17 anos de atuação na área da beleza. Ela é uma profissional multifacetada, especializada em micropigmentação, tatuagem e lash design, além de ministrar cursos nessas áreas. Seu propósito de vida é claro: elevar a autoestima das pessoas e eternizar momentos marcantes através da arte em suas diversas formas de expressão.",
-      instagram: "@michelemouralash",
-      profileImage: "./images/Tatuadores/Michele/perfil.jpeg",
-      workImages: [
-        "./images/Tatuadores/Michele/work1.jpeg",
-        "./images/Tatuadores/Michele/work2.jpeg",
-        "./images/Tatuadores/Michele/work3.jpeg",
-        "./images/Tatuadores/Michele/work4.jpeg"
       ]
     },
     {
@@ -87,15 +87,15 @@ const Tatuadores = () => {
     },
     {
       id: 7,
-      name: "Telmo Grabher",
-      bio: "Telmo Grabher é um tatuador profissional com mais de 25 anos de experiência, consolidando sua atuação em Brasília – DF e com forte presença também em São Paulo. Com formação em arquitetura e design pela Universidade de Brasília (UnB), Telmo encontrou na tatuagem uma forma de expressão artística profunda, que une técnica, simbolismo e ancestralidade. Ele é especialista em trabalhos tribais samoanos e polinésios, designs geométricos de alta precisão e blackwork, sendo amplamente reconhecido por seus traços marcantes, composição harmoniosa e projetos personalizados, desenvolvidos em estreita colaboração com cada cliente. Seu grande diferencial reside no domínio da técnica freehand, onde desenha diretamente na pele, mantendo total fidelidade às tradições culturais que representa. ",
-      instagram: "@telmograbhertattoo",
-      profileImage: "./images/Tatuadores/Telmo/perfil.jpeg",
+      name: "Michele Moura",
+      bio: "Michele Moura, aos 40 anos, possui 17 anos de atuação na área da beleza. Ela é uma profissional multifacetada, especializada em micropigmentação, tatuagem e lash design, além de ministrar cursos nessas áreas. Seu propósito de vida é claro: elevar a autoestima das pessoas e eternizar momentos marcantes através da arte em suas diversas formas de expressão.",
+      instagram: "@michelemouralash",
+      profileImage: "./images/Tatuadores/Michele/perfil.jpeg",
       workImages: [
-        "./images/Tatuadores/Telmo/work1.jpeg",
-        "./images/Tatuadores/Telmo/work2.jpeg",
-        "./images/Tatuadores/Telmo/work3.jpeg",
-        "./images/Tatuadores/Telmo/work4.jpeg"
+        "./images/Tatuadores/Michele/work1.jpeg",
+        "./images/Tatuadores/Michele/work2.jpeg",
+        "./images/Tatuadores/Michele/work3.jpeg",
+        "./images/Tatuadores/Michele/work4.jpeg"
       ]
     },
     {
