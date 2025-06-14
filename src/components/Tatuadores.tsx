@@ -27,10 +27,10 @@ const Tatuadores = () => {
       instagram: "@cunha.tattoo",
       profileImage: "./images/Tatuadores/Rodrigo/perfil.jpg",
       workImages: [
-        "./images/Tatuadores/Rodrigo/tattoo1.jpg",
-        "./images/Tatuadores/Rodrigo/tattoo2.jpg",
-        "./images/Tatuadores/Rodrigo/tattoo3.jpg",
-        "./images/Tatuadores/Rodrigo/tattoo4.jpg"
+        "./images/Tatuadores/Rodrigo/work1.jpg",
+        "./images/Tatuadores/Rodrigo/work2.jpg",
+        "./images/Tatuadores/Rodrigo/work3.jpg",
+        "./images/Tatuadores/Rodrigo/work4.jpg"
       ]
     },
     {
@@ -40,10 +40,10 @@ const Tatuadores = () => {
       instagram: "@michelemouralash",
       profileImage: "./images/Tatuadores/Michele/perfil.jpeg",
       workImages: [
-        "./images/Tatuadores/Michele/tattoo1.jpeg",
-        "./images/Tatuadores/Michele/tattoo2.jpeg",
-        "./images/Tatuadores/Michele/tattoo3.jpeg",
-        "./images/Tatuadores/Michele/tattoo4.jpeg"
+        "./images/Tatuadores/Michele/work1.jpeg",
+        "./images/Tatuadores/Michele/work2.jpeg",
+        "./images/Tatuadores/Michele/work3.jpeg",
+        "./images/Tatuadores/Michele/work4.jpeg"
       ]
     },
     {
@@ -53,10 +53,10 @@ const Tatuadores = () => {
       instagram: "@giocardoso",
       profileImage: "./images/Tatuadores/Giovanna/perfil.jpg",
       workImages: [
-        "./images/Tatuadores/Giovanna/tattoo1.jpg",
-        "./images/Tatuadores/Giovanna/tattoo2.jpg",
-        "./images/Tatuadores/Giovanna/tattoo3.jpg",
-        "./images/Tatuadores/Giovanna/tattoo4.jpg"
+        "./images/Tatuadores/Giovanna/work1.jpg",
+        "./images/Tatuadores/Giovanna/work2.jpg",
+        "./images/Tatuadores/Giovanna/work3.jpg",
+        "./images/Tatuadores/Giovanna/work4.jpg"
       ]
     },
     {
@@ -66,10 +66,10 @@ const Tatuadores = () => {
       instagram: "@kathynip_arts",
       profileImage: "./images/Tatuadores/Kathlyn/perfil.jpeg",
       workImages: [
-        "./images/Tatuadores/Kathlyn/tattoo1.jpeg",
-        "./images/Tatuadores/Kathlyn/tattoo2.jpeg",
-        "./images/Tatuadores/Kathlyn/tattoo3.jpeg",
-        "./images/Tatuadores/Kathlyn/tattoo4.jpeg"
+        "./images/Tatuadores/Kathlyn/work1.jpeg",
+        "./images/Tatuadores/Kathlyn/work2.jpeg",
+        "./images/Tatuadores/Kathlyn/work3.jpeg",
+        "./images/Tatuadores/Kathlyn/work4.jpeg"
       ]
     },
     {
@@ -79,62 +79,88 @@ const Tatuadores = () => {
       instagram: "@magaltattoo",
       profileImage: "./images/Tatuadores/Rogerio/perfil.jpg",
       workImages: [
-        "./images/Tatuadores/Rogerio/tattoo1.jpeg",
-        "./images/Tatuadores/Rogerio/tattoo2.jpeg",
-        "./images/Tatuadores/Rogerio/tattoo3.jpeg",
-        "./images/Tatuadores/Rogerio/tattoo4.jpeg"
+        "./images/Tatuadores/Rogerio/work1.jpeg",
+        "./images/Tatuadores/Rogerio/work2.jpeg",
+        "./images/Tatuadores/Rogerio/work3.jpeg",
+        "./images/Tatuadores/Rogerio/work4.jpeg"
       ]
     },
     {
       id: 7,
-      name: "Luana Geometric",
-      bio: "Especialista em tatuagens geométricas e mandala, Luana possui uma precisão matemática que resulta em desenhos perfeitamente simétricos e hipnotizantes.",
-      instagram: "@luana_geometric",
-      profileImage: "https://i.pinimg.com/236x/dd/59/82/dd5982a8a5435e77a41d034563a314c5.jpg",
+      name: "Telmo Grabher",
+      bio: "Telmo Grabher é um tatuador profissional com mais de 25 anos de experiência, consolidando sua atuação em Brasília – DF e com forte presença também em São Paulo. Com formação em arquitetura e design pela Universidade de Brasília (UnB), Telmo encontrou na tatuagem uma forma de expressão artística profunda, que une técnica, simbolismo e ancestralidade. Ele é especialista em trabalhos tribais samoanos e polinésios, designs geométricos de alta precisão e blackwork, sendo amplamente reconhecido por seus traços marcantes, composição harmoniosa e projetos personalizados, desenvolvidos em estreita colaboração com cada cliente. Seu grande diferencial reside no domínio da técnica freehand, onde desenha diretamente na pele, mantendo total fidelidade às tradições culturais que representa. ",
+      instagram: "@telmograbhertattoo",
+      profileImage: "./images/Tatuadores/Telmo/perfil.jpeg",
       workImages: [
-        "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./images/tattooTeste1.jpg",
-        "./images/tattooTeste2.jpg",
-        "./images/tattooTeste3.jpg"
+        "./images/Tatuadores/Telmo/work1.jpeg",
+        "./images/Tatuadores/Telmo/work2.jpeg",
+        "./images/Tatuadores/Telmo/work3.jpeg",
+        "./images/Tatuadores/Telmo/work4.jpeg"
       ]
     },
     {
       id: 8,
-      name: "Carlos Tribal",
-      bio: "Com raízes na arte tribal, Carlos é especialista em desenhos étnicos e culturais. Cada tatuagem conta uma história ancestral com respeito e autenticidade.",
-      instagram: "@carlos_tribal",
-      profileImage: "https://i.pinimg.com/236x/c1/e3/cf/c1e3cf5da513e943f82f3bdcebd03402.jpg",
+      name: "Patricia Montoan",
+      bio: "Patricia Mantoan é tatuadora e body piercing há mais de 28 anos, consolidando-se como uma das grandes referências no cenário da tatuagem brasileira. Sua trajetória é marcada pelo pioneirismo, sendo a primeira mulher tatuadora a atuar na icônica Galeria do Rock, em São Paulo. O trabalho de Patricia se destaca pela versatilidade, demonstrando domínio em estilos como colorido, aquarela, fine line e tradicional (old school). Ela sempre prioriza traços precisos, cores vibrantes e composições autênticas em suas criações. Ao longo de sua carreira, Patricia Mantoan estampou mais de 10 capas de revistas especializadas e atuou como jurada em diversas convenções de tatuagem pelo país, contribuindo significativamente para a evolução e profissionalização do mercado. Seu legado é reconhecido pela técnica apurada, sensibilidade artística e paixão que demonstra tanto na arte da tatuagem quanto na perfuração corporal.",
+      instagram: "@patyfadatattoo",
+      profileImage: "./images/Tatuadores/Patricia/perfil.jpeg",
       workImages: [
-        "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./images/tattooTeste1.jpg",
-        "./images/tattooTeste2.jpg",
-        "./images/tattooTeste3.jpg"
+        "./images/Tatuadores/Patricia/work1.jpeg",
+        "./images/Tatuadores/Patricia/work2.jpeg",
+        "./images/Tatuadores/Patricia/work3.jpeg",
+        "./images/Tatuadores/Patricia/work4.jpeg"
       ]
     },
     {
       id: 9,
-      name: "Ana Script",
-      bio: "Mestra em lettering e caligrafia, Ana transforma palavras em arte. Suas tatuagens de frases e nomes são reconhecidas pela elegância e legibilidade perfeita.",
-      instagram: "@ana_script",
-      profileImage: "https://i.pinimg.com/236x/83/23/e9/8323e93c73d0c0ad6204125c6f7b9f9a.jpg",
+      name: "Greg Oliveira",
+      bio: "Greg Oliveira possui 12 anos de vasta experiência como body piercer, oferecendo um serviço que preza pela máxima segurança e higiene. Ele utiliza apenas materiais esterilizados e joias de altíssima qualidade. Sua especialidade são as peças em titânio e ouro, incluindo designs com pedras e ornamentos, garantindo não apenas a beleza, mas também a biocompatibilidade e o conforto para seus clientes. Greg realiza cada procedimento com extremo cuidado, sempre focado na saúde e na plena satisfação de quem o procura.",
+      instagram: "@greg0liveira.piercer",
+      profileImage: "./images/Tatuadores/Greg/perfil.jpeg",
       workImages: [
-        "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./images/tattooTeste1.jpg",
-        "./images/tattooTeste2.jpg",
-        "./images/tattooTeste3.jpg"
+        "./images/Tatuadores/Greg/work1.jpeg",
+        "./images/Tatuadores/Greg/work2.jpeg",
+        "./images/Tatuadores/Greg/work3.jpeg",
+        "./images/Tatuadores/Greg/work4.jpeg"
       ]
     },
     {
       id: 10,
-      name: "Luiza Sanches",
-      bio: "Mestra em lettering e caligrafia, Luiza transforma palavras em arte. Suas tatuagens de frases e nomes são reconhecidas pela elegância e legibilidade perfeita.",
-      instagram: "@ana_script",
-      profileImage: "https://i.pinimg.com/736x/a9/df/33/a9df339ff059dede8342b12fda88a1c7.jpg",
+      name: "Magali Ctvrtnik",
+      bio: "Magali Ctvrtnik é técnica de enfermagem com formação em instrumentação cirúrgica, atuando como body piercer há mais de 17 anos. Em cada procedimento, Magali une técnica apurada, rigorosa segurança e uma estética primorosa. Além disso, é técnica especializada em remoção a laser, com 5 anos de experiência na área. Seu compromisso inabalável é oferecer um atendimento ético, qualificado e totalmente focado no bem-estar e na satisfação de cada cliente.",
+      instagram: "@magallipiercinglaser",
+      profileImage: "./images/Tatuadores/Magali/perfil.jpeg",
       workImages: [
-        "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
-        "./images/tattooTeste1.jpg",
-        "./images/tattooTeste2.jpg",
-        "./images/tattooTeste3.jpg"
+        "./images/Tatuadores/Magali/work1.jpeg",
+        "./images/Tatuadores/Magali/work2.jpeg",
+        "./images/Tatuadores/Magali/work3.jpeg",
+        "./images/Tatuadores/Magali/work4.jpeg"
+      ]
+    },
+    {
+      id: 11,
+      name: "Uendel Oliveira",
+      bio: "Uendel Oliveira é um tatuador premiado com mais de 28 anos de experiência em eternizar arte na pele. Ele é especialista em tattoos coloridas e trabalhos em preto & cinza. Seu portfólio abrange animes, stickers, personagens e muito mais, sempre executados com técnica impecável, precisão e um estilo inconfundível.",
+      instagram: "@uendeloliveiratattoo",
+      profileImage: "./images/Tatuadores/Uendel/perfil.jpeg",
+      workImages: [
+        "./images/Tatuadores/Uendel/work1.jpeg",
+        "./images/Tatuadores/Uendel/work2.jpeg",
+        "./images/Tatuadores/Uendel/work3.jpeg",
+        "./images/Tatuadores/Uendel/work4.jpeg"
+      ]
+    },
+    {
+      id: 12,
+      name: "Renata Cunha",
+      bio: "Renata Cunha, aos 48 anos, é reconhecida como Rainha e Miss Tattoo, atuando tanto como tatuadora quanto como modelo. Ela se destaca por ter sido uma das primeiras Gibi Girls no Brasil, figurando em capas de revistas e concedendo entrevistas em quase todas as emissoras. Renata é uma voz ativa na defesa dos direitos das mulheres tatuadas, lutando pelo respeito e pela liberdade de ser quem escolhem ser. Mãe de um filho abençoado, ela viaja pelo Brasil e internacionalmente, levando sua arte e atuando como jurada, somando mais de 100 participações em bancas de jurados no concurso de Miss Tattoo. Renata sente-se honrada pela concretização de seus sonhos, sendo um deles o de se tornar tatuadora, e atualmente está se especializando em tattoos minimalistas e delicadas. Sua carreira é marcada por diversos troféus, tanto por sua atuação como jurada quanto por homenagens recebidas.",
+      instagram: "@renata_cunha_",
+      profileImage: "./images/Tatuadores/Renata/perfil.jpeg",
+      workImages: [
+        "./images/Tatuadores/Renata/work1.jpeg",
+        "./images/Tatuadores/Renata/work2.jpeg",
+        "./images/Tatuadores/Renata/work3.jpeg",
+        "./images/Tatuadores/Renata/work4.jpeg"
       ]
     }
   ];

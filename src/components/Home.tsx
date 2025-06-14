@@ -27,21 +27,21 @@ const Home = () => {
     },
     {
       id: 2,
+      name: "Telmo Grabher",
+      title: "Tatuador",
+      specialty: "Black Work e Ornamental",
+      instagram: "@telmograbhertattoo",
+      image:
+        "./images/Tatuadores/Telmo/perfil.jpeg",
+    },
+    {
+      id: 3,
       name: "Rodrigo Cunha",
       title: "Tatuador Principal",
       specialty: "Black Work e Ornamental",
       instagram: "@cunha.tattoo",
       image:
         "./images/Tatuadores/Rodrigo/perfil.jpg",
-    },
-    {
-      id: 3,
-      name: "Michele Moura",
-      title: "Especialista em Cores",
-      specialary: "Aquarela e New School",
-      instagram: "@michelemouralash",
-      image:
-        "./images/Tatuadores/Michele/perfil.jpeg",
     },
   ];
 

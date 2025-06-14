@@ -9,10 +9,12 @@ const Footer = () => {
     "@giocardoso",
     "@kathynip_arts",
     "@magaltattoo",
-    "@perfil 7",
-    "@perfil 8",
-    "@perfil 9",
-    "@perfil 10",
+    "@telmograbhertattoo",
+    "@patyfadatattoo",
+    "@greg0liveira.piercer",
+    "@magallipiercinglaser",
+    "@uendeloliveiratattoo",
+    "@renata_cunha_",
   ];
 
   return (

@@ -24,10 +24,12 @@ const Contato = () => {
     "@giocardoso",
     "@kathynip_arts",
     "@magaltattoo",
-    "@perfil 7",
-    "@perfil 8",
-    "@perfil 9",
-    "@perfil 10",
+    "@telmograbhertattoo",
+    "@patyfadatattoo",
+    "@greg0liveira.piercer",
+    "@magallipiercinglaser",
+    "@uendeloliveiratattoo",
+    "@renata_cunha_",
   ];
 
   const [sending, setSending] = useState(false);
@@ -147,7 +149,7 @@ const Contato = () => {
 
             <div className="flex flex-col mt-10 text-center">
               <p className="text-gray-600">Ou siga-nos nas redes sociais:</p>
-              <div className="grid grid-cols-2 gap-6 mt-10 justify-items-center min-w-sm">
+              <div className="grid grid-cols-2 gap-6 mt-10 justify-items-start ml-20 min-w-sm">
               {artists.map((instagram, index) => (
                 <a
                   key={index}
