@@ -36,12 +36,12 @@ const Home = () => {
     },
     {
       id: 3,
-      name: "Rodrigo Cunha",
+      name: "Sérgio Lima",
       title: "Tatuador Principal",
-      specialty: "Black Work e Ornamental",
-      instagram: "@cunha.tattoo",
+      specialty: "",
+      instagram: "@sergiolima.arte",
       image:
-        "./images/Tatuadores/Rodrigo/perfil.jpg",
+        "./images/Tatuadores/Sergio/perfil.JPG",
     },
   ];
 

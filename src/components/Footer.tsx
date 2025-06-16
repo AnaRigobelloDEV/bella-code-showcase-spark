@@ -4,17 +4,20 @@ import { Instagram, Phone, MapPin, Clock } from 'lucide-react';
 const Footer = () => {
   const allTattooArtists = [
     "@walarcanjo",
+    "@telmograbhertattoo",
+    "@sergiolima.arte",
     "@cunha.tattoo", 
     "@michelemouralash",
     "@giocardoso",
     "@kathynip_arts",
     "@magaltattoo",
-    "@telmograbhertattoo",
     "@patyfadatattoo",
     "@greg0liveira.piercer",
     "@magallipiercinglaser",
     "@uendeloliveiratattoo",
     "@renata_cunha_",
+    "@sandrowayne",
+    "@uakactustattoo",
   ];
 
   return (

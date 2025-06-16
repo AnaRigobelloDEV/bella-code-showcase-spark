@@ -19,17 +19,20 @@ const Contato = () => {
 
   const artists = [
     "@walarcanjo",
+    "@telmograbhertattoo",
+    "@sergiolima.arte",
     "@cunha.tattoo", 
     "@michelemouralash",
     "@giocardoso",
     "@kathynip_arts",
     "@magaltattoo",
-    "@telmograbhertattoo",
     "@patyfadatattoo",
     "@greg0liveira.piercer",
     "@magallipiercinglaser",
     "@uendeloliveiratattoo",
     "@renata_cunha_",
+    "@sandrowayne",
+    "@uakactustattoo",
   ];
 
   const [sending, setSending] = useState(false);
