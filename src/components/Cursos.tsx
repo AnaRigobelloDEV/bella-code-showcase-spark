@@ -1,43 +1,90 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Clock, Users, Star, Award } from 'lucide-react';
+import { Clock, Users, Star, Award, BookOpen, X } from 'lucide-react'; 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Footer from '@/components/Footer';
 
+// Definição do tipo para um curso para melhor manutenibilidade
+type Course = {
+  id: number;
+  name: string;
+  description: string;
+  duration: string;
+  classes: string;
+  level: string;
+  price: string;
+  image: string;
+  topics: string[];
+};
+
 const Cursos = () => {
-  const courses = [
+  // Tipando o estado para aceitar um objeto de curso ou nulo
+  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+
+  const courses: Course[] = [
+    // Curso Básico (sem alterações)
     {
       id: 1,
-      name: "Curso Básico de Tatuagem",
-      description: "Aprenda os fundamentos da tatuagem, desde higienização até técnicas básicas de sombreamento e traço.",
-      duration: "40 horas",
-      students: "12 alunos",
+      name: "Curso Básico",
+      description: "Curso completo com 20 aulas que abordam desde a história da tatuagem, biossegurança, técnicas de traço, sombreamento, colorimetria até a prática em pele humana e gestão de carreira.",
+      duration: "80 horas",
+      classes: "20 aulas",
       level: "Iniciante",
       price: "R$ 1.200",
       image: "https://i.pinimg.com/236x/70/d0/7a/70d07aeb497442d3c88bb95d941aeedb.jpg",
-      topics: ["Higienização e segurança", "Equipamentos básicos", "Técnicas de traço", "Sombreamento inicial"]
+      topics: [
+          "Bônus: Aulas de Desenho (Gravada)", "01 – Introdução, História da tatuagem e Categoria – Prática e primeiro contato.", "02 – Máquinas agulhas e Pigmentos e Equipamentos.", "03 – Decalque Básico / Traços (Prática)", "04 – Traços - Fine Bold, Sculpt line", "05 – Decalque Avançado (Prática)", "06 – Preenchimento Sólido (Pratica)", "07 – Sombreamento, Agulhas degradê (Teoria e Pratica)", "08 – Sombreamento (Prática 2)", "09 – Colorimetria, Transição de Tons (Teoria + Pratica)", "10 – Misturas Cores e Diluição (Prática)", "11 – Rastelado e Pontilhismo (Prática)", "12 – Biosegurança, Montagem de Bancada, Anamnese, Imonologia e Fisiologia da pele.", "13 – Atendimento ao Cliente, montagem de projetos e orçamentos.", "14 – Fotografia, Redes Sociais registro de processos.", "15 – Aula de Obervação com o Professor", "16 – Prática em pele Humana com mentoria 1", "17 – Pratica em pele humana com mentoria 2", "18 - Pratica em pele humana com mentoria 3", "19 - Pratica em pele humana com mentoria 4", "20 – Encerramento com dinâmica e entrega do Certificado."
+      ]
     },
+    // CURSO AVANÇADO ATUALIZADO COM AS NOVAS INFORMAÇÕES
     {
       id: 2,
-      name: "Realismo em Tatuagem",
-      description: "Domine as técnicas avançadas de realismo, incluindo retrato e paisagens com qualidade fotográfica.",
-      duration: "60 horas",
-      students: "8 alunos",
+      name: "Curso Avançado de Tatuagem",
+      description: "Leve sua técnica do intermediário ao avançado, desenvolvendo seu estilo autoral e profissional com foco em realismo, cobertura, freehand e projetos complexos.",
+      duration: "100 horas",
+      classes: "25 aulas",
       level: "Avançado",
-      price: "R$ 2.500",
-      image: "https://i.pinimg.com/236x/32/fc/32/32fc32a3c4730884c586c81153bb359d.jpg",
-      topics: ["Estudo de luz e sombra", "Técnicas de realismo", "Retratos em pele", "Texturas avançadas"]
+      price: "R$ 2.500", // Preço mantido do curso anterior, ajuste se necessário
+      image: "https://i.pinimg.com/236x/32/fc/32/32fc32a3c4730884c586c81153bb359d.jpg", // Imagem mantida, ajuste se necessário
+      topics: [
+        "01 - Introdução ao Curso + Planejamento de Projeto Autoral (Teórica)",
+        "02 - Fundamentos do Realismo P&B + Estudo de Referência (Teórico/Prático)",
+        "03 - Prática de Realismo P&B em Pele Artificial (Prática)",
+        "04 - Fundamentos do Realismo Colorido + Círculo Cromático Aplicado (Teórica)",
+        "05 - Prática de Realismo Colorido em Pele Artificial (Prática)",
+        "06 - Técnicas de Cobertura: Análise de Casos e Estratégias (Teórica)",
+        "07 - Prática de Cobertura em Pele Artificial (Prática)",
+        "08 - Técnicas de Fechamentos (Sleeves, Costas, Coxa) (Teórica)",
+        "09 - Prática de Fechamento: Composição em Pele Artificial (Prática)",
+        "10 - Freehand: Técnicas e Exercícios Criativos (Teórico/Prático)",
+        "11 - Prática de Freehand em Pele Artificial (Prática)",
+        "12 - Impressão Avançada: Layout, Formatos, Ajustes de Arte (Teórica)",
+        "13 - Black Work e Sombreamento com Peso Visual (Teórica)",
+        "14 - Prática de Black Work + Criatividade Gráfica (Prática)",
+        "15 - Posicionamento Oriental: Elementos, Movimento, Fluxo (Teórico/Prático)",
+        "16 - Prática de Composição Oriental em Pele Artificial (Prática)",
+        "17 - Conceito Autoral: Construção de Estilo e Identidade (Teórica)",
+        "18 - Prática: Flash Autoral com Feedback entre Alunos (Prática)",
+        "19 - Biosegurança (Revisão Avançada + Procedimentos de Risco) (Teórica)",
+        "20 - Workshop: Marketing e Empreendedorismo para Tatuadores (Workshop)",
+        "21 - Workshop: Regulamentação e Documentação para Estúdios (Workshop)",
+        "22 - Técnica de Atendimento + Desafio entre os alunos (Prática/Desafio)",
+        "23 - Desenvolvimento de Projeto Final em Pele Artificial (Prática)",
+        "24 - Planejamento e Simulação de Tatuagem em Pele Humana (Teórico/Prático)",
+        "25 - Tatuagem Final em Pele Humana + Avaliação + Certificação (Prática)"
+      ]
     },
+    // Demais cursos sem alterações
     {
       id: 3,
       name: "Tatuagem Colorida",
       description: "Especialização em técnicas de cor, desde aquarela até new school vibrante.",
       duration: "45 horas",
-      students: "10 alunos",
+      classes: "10 aulas",
       level: "Intermediário",
       price: "R$ 1.800",
       image: "https://i.pinimg.com/236x/c3/d3/73/c3d3738cf866eff1a582d92438670bec.jpg",
@@ -48,7 +95,7 @@ const Cursos = () => {
       name: "Fine Line e Minimalismo",
       description: "Aprenda a criar tatuagens delicadas e precisas com traços finos e design minimalista.",
       duration: "30 horas",
-      students: "15 alunos",
+      classes: "15 aulas",
       level: "Intermediário",
       price: "R$ 1.500",
       image: "https://i.pinimg.com/236x/83/a1/d8/83a1d8310b90e83e051be68434afb82d.jpg",
@@ -59,7 +106,7 @@ const Cursos = () => {
       name: "Geometric e Mandala",
       description: "Domine a arte das formas geométricas perfeitas e mandalas complexas.",
       duration: "35 horas",
-      students: "12 alunos",
+      classes: "12 aulas",
       level: "Intermediário",
       price: "R$ 1.600",
       image: "https://i.pinimg.com/736x/69/7e/34/697e346558fa89d489c2dac697e0b4e8.jpg",
@@ -70,7 +117,7 @@ const Cursos = () => {
       name: "Business da Tatuagem",
       description: "Aprenda a empreender no ramo da tatuagem, desde marketing até gestão de estúdio.",
       duration: "20 horas",
-      students: "20 alunos",
+      classes: "20 aulas",
       level: "Todos os níveis",
       price: "R$ 800",
       image: "https://i.pinimg.com/236x/e9/f8/62/e9f8624f0e03b4298fbdc19fde36974d.jpg",
@@ -139,7 +186,7 @@ const Cursos = () => {
         {/* Courses Grid */}
         <div className="courses-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course) => (
-            <Card key={course.id} className="course-card overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <Card key={course.id} className="course-card flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="aspect-video overflow-hidden">
                 <img 
                   src={course.image}
@@ -148,50 +195,74 @@ const Cursos = () => {
                 />
               </div>
               
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center justify-between mb-3">
-                  <Badge className={getLevelColor(course.level)}>
+                  <Badge className={`${getLevelColor(course.level)} px-3 py-1 text-sm`}>
                     {course.level}
                   </Badge>
                   <span className="text-2xl font-bold text-primary">{course.price}</span>
                 </div>
                 
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{course.name}</h3>
-                <p className="text-gray-600 mb-4 line-clamp-3 min-h-[4.5rem]">{course.description}</p>
+                <p className="text-gray-600 mb-4 line-clamp-3 min-h-[4.5rem] flex-grow">{course.description}</p>
                 
-                <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                <div className="flex items-center gap-4 my-4 text-sm text-gray-500">
                   <div className="flex items-center gap-1">
                     <Clock size={16} />
                     <span>{course.duration}</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Users size={16} />
-                    <span>{course.students}</span>
+                    <BookOpen size={16} /> 
+                    <span>{course.classes}</span>
                   </div>
                 </div>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-800 mb-2">O que você vai aprender:</h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    {course.topics.slice(0, 3).map((topic, index) => (
-                      <li key={index} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
-                        {topic}
-                      </li>
-                    ))}
-                    {course.topics.length > 3 && (
-                      <li className="text-secondary text-sm">+ {course.topics.length - 3} tópicos</li>
-                    )}
-                  </ul>
-                </div>
-                
-                <Button className="w-full bg-primary hover:bg-primary-dark text-white mt-auto">
+                <Button className="w-full bg-primary hover:bg-primary-dark text-white mt-auto" onClick={() => setSelectedCourse(course)}>
                   Saiba Mais
                 </Button>
               </div>
             </Card>
           ))}
         </div>
+
+        {/* Modal de Detalhes do Curso */}
+        {selectedCourse && (
+          <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center p-4 z-50 transition-opacity duration-300">
+            <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative animate-in fade-in-90 zoom-in-95">
+              <button onClick={() => setSelectedCourse(null)} className="absolute top-3 right-3 text-gray-400 hover:text-gray-800 bg-white/50 rounded-full p-1 z-10">
+                <X size={24} />
+              </button>
+              <img src={selectedCourse.image} alt={selectedCourse.name} className="w-full h-60 object-cover rounded-t-lg" />
+              <div className="p-6 md:p-8">
+                <h2 className="text-3xl font-bold text-primary mb-2">{selectedCourse.name}</h2>
+                <Badge className={`${getLevelColor(selectedCourse.level)} mb-4`}>{selectedCourse.level}</Badge>
+                <p className="text-gray-600 mb-6">{selectedCourse.description}</p>
+                
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6 text-sm">
+                    <div className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg"><Clock size={20} className="text-primary flex-shrink-0" /><div><p className="font-semibold">Duração</p><p>{selectedCourse.duration}</p></div></div>
+                    <div className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg"><BookOpen size={20} className="text-primary flex-shrink-0" /><div><p className="font-semibold">Aulas</p><p>{selectedCourse.classes}</p></div></div>
+                    <div className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg"><p className="text-lg font-bold text-primary">{selectedCourse.price}</p></div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-semibold text-xl text-gray-800 mb-4">Grade curricular do curso:</h4>
+                  <ul className="text-gray-600 space-y-2">
+                    {selectedCourse.topics.map((topic, index) => (
+                      <li key={index} className="flex items-start gap-3 p-2 bg-white hover:bg-gray-50 rounded">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div>
+                        <span>{topic}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <Button asChild className="w-full bg-primary hover:bg-primary-dark text-white text-lg py-3 mt-4">
+                  <Link to="/contato">Inscreva-se Agora</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* CTA Section */}
         <div className="mt-20 text-center bg-gradient-to-r from-primary to-secondary rounded-2xl p-12 mb-10">
@@ -200,8 +271,8 @@ const Cursos = () => {
             Entre em contato conosco e descubra qual curso é ideal para o seu nível e objetivos. 
             Nossa equipe está pronta para ajudar você a se tornar um tatuador profissional.
           </p>
-          <Button className="bg-white text-primary hover:bg-gray-100 px-8 py-3 text-lg font-semibold">
-          <Link to="/contato">Fale conosco</Link>
+          <Button asChild className="bg-white text-primary hover:bg-gray-100 px-8 py-3 text-lg font-semibold">
+           <Link to="/contato">Fale conosco</Link>
           </Button>
         </div>
       </div>

@@ -152,7 +152,7 @@ const Contato = () => {
 
             <div className="flex flex-col mt-10 text-center">
               <p className="text-gray-600">Ou siga-nos nas redes sociais:</p>
-              <div className="grid grid-cols-2 gap-6 mt-10 justify-items-start ml-20 min-w-sm">
+              <div className="grid grid-cols-2 gap-6 mt-10 justify-items-start md:ml-20 min-w-sm">
               {artists.map((instagram, index) => (
                 <a
                   key={index}
