@@ -165,7 +165,7 @@ const Cursos = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Bem-vindo à Wall Arcanjo Tattoo & Academy</h1>
           <div className="max-w-3xl mx-auto text-lg text-gray-600 space-y-6">
             <p>
-              Com mais de 15 anos de carreira, a Mestra das Agulhas <Link to="/tatuadores/wall-arcanjo" className="text-primary hover:underline">Wall Arcanjo</Link> reuniu uma equipe formada pelos <Link to="/tatuadores" className="text-primary hover:underline">melhores tatuadores</Link> que cruzaram seu caminho ao longo de duas décadas de estrada.
+              Com mais de 15 anos de carreira, a Mestra das Agulhas <Link to="/tatuadores" className="text-primary hover:underline">Wall Arcanjo</Link> reuniu uma equipe formada pelos <Link to="/tatuadores" className="text-primary hover:underline">melhores tatuadores</Link> que cruzaram seu caminho ao longo de duas décadas de estrada.
             </p>
             <div>
               <p className="font-semibold text-xl mb-2">O resultado?</p>
