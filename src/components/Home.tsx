@@ -214,12 +214,12 @@ gsap.to(logoRef.current, { opacity: 1, y: 0, duration: 0.5 })
        <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Quer Aprender a Arte da Tatuagem?
+            VOCÊ PODE SER A PRÓXIMA LENDA DA TATUAGEM NO BRASIL E NO MUNDO
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Oferecemos cursos completos desde o básico até técnicas avançadas.
-            Aprenda com os melhores profissionais e transforme sua paixão em
-            profissão.
+            A sua jornada começa aqui, com os maiores nomes do mercado como seus Mestres. 
+            <br /><br />
+            Do básico ao avançado, técnicas, estratégias de negócio e muito mais, para transformar sua paixão em profissão!
           </p>
           <Button
             asChild
