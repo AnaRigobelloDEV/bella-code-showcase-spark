@@ -210,6 +210,26 @@ gsap.to(logoRef.current, { opacity: 1, y: 0, duration: 0.5 })
         </div>
       </section>
 
+       {/* Courses CTA Section */}
+       <section className="py-20 bg-primary text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Quer Aprender a Arte da Tatuagem?
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Oferecemos cursos completos desde o básico até técnicas avançadas.
+            Aprenda com os melhores profissionais e transforme sua paixão em
+            profissão.
+          </p>
+          <Button
+            asChild
+            className="bg-secondary hover:bg-secondary-dark text-white px-8 py-3 text-lg"
+          >
+            <Link to="/cursos">Explorar Cursos</Link>
+          </Button>
+        </div>
+      </section>
+
       {/* Studio Proposal Section */}
       <section ref={proposalSectionRef} className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -333,25 +353,7 @@ gsap.to(logoRef.current, { opacity: 1, y: 0, duration: 0.5 })
         </div>
       </section>
 
-      {/* Courses CTA Section */}
-      <section className="py-20 bg-primary text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Quer Aprender a Arte da Tatuagem?
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Oferecemos cursos completos desde o básico até técnicas avançadas.
-            Aprenda com os melhores profissionais e transforme sua paixão em
-            profissão.
-          </p>
-          <Button
-            asChild
-            className="bg-secondary hover:bg-secondary-dark text-white px-8 py-3 text-lg"
-          >
-            <Link to="/cursos">Explorar Cursos</Link>
-          </Button>
-        </div>
-      </section>
+     
 
       <Footer />
     </div>

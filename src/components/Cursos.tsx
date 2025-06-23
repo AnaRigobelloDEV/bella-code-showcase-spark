@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -160,68 +160,75 @@ const Cursos = () => {
   return (
     <div className="pt-32 bg-secondary/90 min-h-screen">
       <div className="container mx-auto px-4">
-        {/* Header */}
+        {/* Bloco 1: Bem-vindo */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Nossos Cursos</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Transforme sua paixão em profissão com nossos cursos completos de tatuagem. 
-            Aprenda com os melhores profissionais do mercado.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
-              <Star className="text-primary" size={20} />
-              <span className="text-primary font-medium">Certificado Reconhecido</span>
-            </div>
-            <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
-              <Users className="text-primary" size={20} />
-              <span className="text-primary font-medium">Turmas Reduzidas</span>
-            </div>
-            <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
-              <Award className="text-primary" size={20} />
-              <span className="text-primary font-medium">Certificado de Conclusão</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Bem-vindo à Wall Arcanjo Tattoo & Academy</h1>
+          <div className="max-w-3xl mx-auto text-lg text-gray-600 space-y-6">
+            <p>
+              Com mais de 20 anos de carreira, a Mestra das Agulhas <Link to="/tatuadores/wall-arcanjo" className="text-primary hover:underline">Wall Arcanjo</Link> reuniu uma equipe formada pelos <Link to="/tatuadores" className="text-primary hover:underline">melhores tatuadores</Link> que cruzaram seu caminho ao longo de duas décadas de estrada.
+            </p>
+            <div>
+              <p className="font-semibold text-xl mb-2">O resultado?</p>
+              <p className="mb-4">Uma escola feita por artistas, para formar artistas!</p>
+              <p>Inauguramos a estrutura de ensino mais criativa e moderna de São Paulo, a apenas 5 minutos do Metrô Vila Mariana, no coração da cena artística da cidade.</p>
+              <p className="font-bold mt-4">Aqui, você aprende com quem vive da tattoo – e vai sair preparado para fazer o mesmo.</p>
             </div>
           </div>
         </div>
 
+        {/* Bloco 2: O que você encontra */}
+        <div className="bg-primary/5 p-8 rounded-lg mb-16">
+            <h2 className="text-3xl font-bold text-primary text-center mb-6">No nosso curso, você encontra:</h2>
+            <ul className="grid md:grid-cols-2 gap-x-8 gap-y-4 max-w-4xl mx-auto text-gray-700">
+                <li className="flex items-start"><Star className="text-primary mr-3 mt-1 flex-shrink-0" size={20} />Professores renomados de diferentes estilos e especialidades</li>
+                <li className="flex items-start"><BookOpen className="text-primary mr-3 mt-1 flex-shrink-0" size={20} />Aulas práticas com acompanhamento próximo</li>
+                <li className="flex items-start"><Users className="text-primary mr-3 mt-1 flex-shrink-0" size={20} />Turmas reduzidas e aprendizado personalizado</li>
+                <li className="flex items-start"><Award className="text-primary mr-3 mt-1 flex-shrink-0" size={20} />Projetos reais, vivência de estúdio e suporte pós-curso</li>
+                <li className="flex items-start"><Award className="text-primary mr-3 mt-1 flex-shrink-0" size={20} />Certificado reconhecido no mercado</li>
+            </ul>
+        </div>
+
         {/* Courses Grid */}
         <div className="courses-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {courses.map((course) => (
-            <Card key={course.id} className="course-card flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div className="aspect-video overflow-hidden">
-                <img 
-                  src={course.image}
-                  alt={course.name}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="flex items-center justify-between mb-3">
-                  <Badge className={`${getLevelColor(course.level)} px-3 py-1 text-sm`}>
-                    {course.level}
-                  </Badge>
-                  <span className="text-2xl font-bold text-primary">{course.price}</span>
+          {courses.map((course, index) => (
+            <React.Fragment key={course.id}>
+              <Card className="course-card flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={course.image}
+                    alt={course.name}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{course.name}</h3>
-                <p className="text-gray-600 mb-4 line-clamp-3 min-h-[4.5rem] flex-grow">{course.description}</p>
-                
-                <div className="flex items-center gap-4 my-4 text-sm text-gray-500">
-                  <div className="flex items-center gap-1">
-                    <Clock size={16} />
-                    <span>{course.duration}</span>
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="flex items-center justify-between mb-3">
+                    <Badge className={`${getLevelColor(course.level)} px-3 py-1 text-sm`}>
+                      {course.level}
+                    </Badge>
+                    <span className="text-2xl font-bold text-primary">{course.price}</span>
                   </div>
-                  <div className="flex items-center gap-1">
-                    <BookOpen size={16} /> 
-                    <span>{course.classes}</span>
+                  <h3 className="text-xl font-bold mb-2 text-gray-800">{course.name}</h3>
+                  <p className="text-gray-600 mb-4 flex-grow">{course.description}</p>
+                  
+                  <div className="text-sm text-gray-500 space-y-2 mb-4">
+                    <div className="flex items-center"><Clock size={16} className="mr-2" /> {course.duration}</div>
+                    <div className="flex items-center"><BookOpen size={16} className="mr-2" /> {course.classes}</div>
                   </div>
+
+                  <Button onClick={() => setSelectedCourse(course)} className="w-full mt-auto bg-primary hover:bg-primary/90 text-white">Ver Detalhes</Button>
                 </div>
-                
-                <Button className="w-full bg-primary hover:bg-primary-dark text-white mt-auto" onClick={() => setSelectedCourse(course)}>
-                  Saiba Mais
-                </Button>
-              </div>
-            </Card>
+              </Card>
+              {index === 2 && (
+                <div className="lg:col-span-3 md:col-span-2 bg-primary text-white rounded-lg p-8 my-8 text-center flex flex-col items-center justify-center">
+                  <h2 className="text-3xl font-bold mb-4">A tatuagem pode ser sua carreira.</h2>
+                  <p className="text-xl mb-6">E aqui, ela começa do jeito certo!</p>
+                  <Button asChild className="bg-white text-primary hover:bg-gray-200 font-bold py-3 px-8 text-lg">
+                    <Link to="/contato">Comece sua jornada</Link>
+                  </Button>
+                </div>
+              )}
+            </React.Fragment>
           ))}
         </div>
 
