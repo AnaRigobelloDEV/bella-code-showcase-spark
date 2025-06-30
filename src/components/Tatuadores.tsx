@@ -14,7 +14,7 @@ const Tatuadores = () => {
       instagram: "@walarcanjo",
       profileImage: "./images/Tatuadores/Wall/perfil.png",
       workImages: [
-        "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400",
+        "./images/Tatuadores/Wall/work1.jpg",
         "./images/tattooTeste1.jpg",
         "./images/tattooTeste2.jpg",
         "./images/tattooTeste3.jpg"
