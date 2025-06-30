@@ -228,7 +228,7 @@ const Contato = () => {
               <div className=" bg-gray-200 rounded-lg flex items-center justify-center">
                 <div className="text-center text-gray-500 w-full">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.479022810896!2d-46.6338946!3d-23.5871475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5b133142b391%3A0xb32c4113d50aa26f!2sVHS%20CORP!5e0!3m2!1spt-BR!2sbr!4v1748900906145!5m2!1spt-BR!2sbr"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.479355438281!2d-46.6364730239137!3d-23.587135562541132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bd822f15733%3A0x303ac581e1f05f0e!2sWALL%20ARCANJO%20TATTOO%20%26%20ACADEMY%20(24horas)!5e0!3m2!1spt-BR!2sbr!4v1751305510577!5m2!1spt-BR!2sbr"
                     style={{ border: 0 }}
                     allowFullScreen={true}
                     loading="lazy"
